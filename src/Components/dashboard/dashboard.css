@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    
+}
+
+.dashboard{
+
+    display: grid;
+    height: 100vh;
+    grid-template-columns: auto 1fr   ;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: 
+    "header header"
+    "side main"
+    ;
+
+}

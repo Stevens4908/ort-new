@@ -1,0 +1,27 @@
+.sidebar{
+    background-color: blue;
+    grid-area: side;
+    transition: width 0.3s ease;
+    width: 200px ;
+  
+  
+}
+
+
+.x{
+    padding-right: 80px;
+    font: 2rem sans-serif;
+    overflow: hidden;
+
+}
+
+ .colapsar {
+    grid-area: side;
+    width: 0px;
+    background-color: yellow;
+    
+  }
+
+  .colapsar.li{
+    display: none;
+  }

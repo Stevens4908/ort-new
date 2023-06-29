@@ -1,0 +1,13 @@
+.header{
+
+    background-color: aqua;
+    grid-area: header;
+    z-index: 4;
+}
+
+
+  
+  .header i{
+cursor: pointer;
+z-index: 3;
+  }
