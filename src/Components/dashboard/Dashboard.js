@@ -27,22 +27,17 @@ return(
 
 
 
-      <Router>
+    <Router>
 
-<div className="dashboard">
+          <div className="dashboard">
 
-            <Header clickColapsar={clickColapsar} />
-            <Sidebar  colapsar={colapsar} />
+              <Header clickColapsar={clickColapsar} />
+              <Sidebar  colapsar={colapsar} />
 
-            <Content>
+              <Content/>
 
-                 
-
-            </Content>
-
-             
-
-    </div>
+   
+          </div>
 
 
 
@@ -51,7 +46,7 @@ return(
      
 
       
-    </React.Fragment>
+  </React.Fragment>
    
 )
 

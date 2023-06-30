@@ -1,7 +1,19 @@
-.content{
 
+.content{
    
+    
     grid-area: main;
     z-index: 5;
     
+    }
+
+    .contenedor{
+        height: 80vh;
+        margin-top: 40px ;
+        margin-right: 10%;
+         overflow-y: auto;
+        background-color: rgba(240, 248, 255, 0.4);
+        padding: 20px;
+        
+        border-radius: 0 40px 40px 0;
     }
