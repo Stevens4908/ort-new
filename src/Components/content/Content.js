@@ -5,6 +5,8 @@ import AgregarEquipo from "../pages/agregar_equipo/AgregarEquipo"
 import Mesas from "../pages/mesas/Mesas"
 import Equis from "../Equis"
 import CrearCupon from "../pages/crear_cupon/CrearCupon"
+import CrearProovedor from "../pages/crear_proovedor/CrearProovedor"
+import CostosFijos from "../pages/costos_fijos/CostosFijos"
 
 const Content = () => {
 
@@ -22,6 +24,9 @@ const Content = () => {
                     </Route>
                     <Route path="mesas/equis" element={<Equis/>}></Route>
                     <Route path="/crearcupon" element={<CrearCupon/>}/>
+                    <Route path="/crearproovedor" element={<CrearProovedor/>}/>
+                    <Route path="/costosfijos" element={<CostosFijos/>}/>
+
                 </Routes>
         </div>
                 

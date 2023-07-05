@@ -39,11 +39,11 @@ const Sidebar = ({colapsar}) => {
         className: "text-white"   
         },
         {
-            to: "costosfijos",
-            text: "Costos Fijos",
-            icon: <PiBookOpenTextFill/>,
-            className: "text-white"   
-            }
+        to: "costosfijos",
+        text: "Costos Fijos",
+        icon: <PiBookOpenTextFill/>,
+        className: "text-white"   
+        }
     ];
 
 
@@ -64,7 +64,10 @@ const Sidebar = ({colapsar}) => {
                         </li>
                             ))}
                     </ul>
-
+                            <div className="container text-center">
+                                <button className="boton">Menu</button>
+                            </div>
+                           
                 </div>
                 
              </section>

@@ -11,3 +11,17 @@
 cursor: pointer;
 z-index: 3;
   }
+
+  .burger{
+    visibility: visible;
+  }
+
+  @media (min-width:720px){
+    
+
+    .burger {
+      visibility: hidden
+      ;
+        
+     }
+    }

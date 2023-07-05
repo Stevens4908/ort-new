@@ -12,7 +12,7 @@ return(
 <header className="header">
 
 <h1 className="">
-    <i><FaBars  onClick={clickColapsar} /></i>
+    <i className="burger"><FaBars  onClick={clickColapsar} /></i>
     
     el header
 </h1>

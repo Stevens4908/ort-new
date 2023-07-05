@@ -9,19 +9,10 @@ function App() {
   return (
 
    
-     
-
        <Dashboard/>
 
 
 
-  
-    
-
-
-     
-      
-    
   )
 }
 
