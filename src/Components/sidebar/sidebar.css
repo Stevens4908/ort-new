@@ -3,7 +3,8 @@
     grid-area: side;
     transition: width 0.3s ease;
     width: 400px ;
-  
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none ;
 }
 
 
@@ -15,17 +16,17 @@
     border-radius: 40px 0 0 40px;
 }
 
-.x ul{
+.sidebar ul{
     padding-top: 5% ;
 }
 
-.x li{
+.sidebar li{
     list-style: none;
     line-height: 40px;
     font-size: 2em;
 }
 
-.x a{
+.sidebar a{
     text-decoration: none;
 }
 
@@ -49,3 +50,8 @@
  }
 
  
+ @media (min-width:720px) {
+    .sidebar{
+        display: block;
+    }
+ }

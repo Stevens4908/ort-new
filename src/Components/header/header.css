@@ -5,6 +5,9 @@
     z-index: 4;
 }
 
+.offcanvas-header button.close {
+  color: red !important;
+}
 
   
   .header i{
@@ -16,6 +19,28 @@ z-index: 3;
     visibility: visible;
   }
 
+  .offcanvas{
+    display: block;
+    width: 70vw !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .res-sidebar ul{
+    padding-top: 5% ;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.res-sidebar li{
+    list-style: none;
+    line-height: 40px;
+    font-size: 1.5rem;
+}
+
+.res-sidebar a{
+    text-decoration: none;
+}
+
   @media (min-width:720px){
     
 
@@ -24,4 +49,9 @@ z-index: 3;
       ;
         
      }
+
+     .offcanvas{
+        display: none;
+     }
+
     }

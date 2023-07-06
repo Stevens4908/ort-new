@@ -12,7 +12,8 @@ import { PiBookOpenTextFill } from "react-icons/pi";
 
 const Sidebar = ({colapsar}) => {
 
-    
+
+
     const lista = [
         {
         to: "agregarequipos",
@@ -54,7 +55,7 @@ const Sidebar = ({colapsar}) => {
 
              <section className={`sidebar ${colapsar ? 'colapsar' : '' } `}>
 
-                <div className="x">
+                {/*<div className="x">*/}
                     <ul>
                         {lista.map((item, index) => (
                         <li key={index}>
@@ -68,7 +69,8 @@ const Sidebar = ({colapsar}) => {
                                 <button className="boton">Menu</button>
                             </div>
                            
-                </div>
+                {/*</div>*/}
+                
                 
              </section>
 

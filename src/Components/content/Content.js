@@ -14,7 +14,7 @@ const Content = () => {
 
 <main className="content">
 
-        <div className="contenedor">
+        {/*<div className="contenedor">*/}
                 <Routes>
 
                     <Route path="/" element="" />
@@ -28,7 +28,7 @@ const Content = () => {
                     <Route path="/costosfijos" element={<CostosFijos/>}/>
 
                 </Routes>
-        </div>
+        {/*</div>*/}
                 
 </main>
 
