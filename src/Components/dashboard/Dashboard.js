@@ -12,15 +12,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 const  Dashboard  = () => {
 
 
-const[colapsar, setColapsar] = React.useState(false)
-
- 
-
-    const clickColapsar = () => {
-      setColapsar(!colapsar);
-     
-    };
-
   
 return(
   <React.Fragment>
@@ -31,9 +22,8 @@ return(
 
           <div className="dashboard">
 
-              <Header clickColapsar={clickColapsar} />
-              <Sidebar  colapsar={colapsar} />
-
+              <Header  />
+              <Sidebar  />
               <Content/>
 
    

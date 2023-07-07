@@ -14,14 +14,14 @@ const CrearCupon = () => {
 
 <div class="container">
 
-    <div className='row justify-content-end px-0'>
+    <div className='row justify-content-end px-0 pt-4'>
         <div className='col-md-5 bg-info'>
             <h2>CREA TUS CUPONES</h2>
         </div>
     </div>
 
         <br/>
-        <div class="row justify-content-center mt-5">
+        <div class="row justify-content-center pt-5">
             <div class="col-md-6" id="formulario">
                 <form>
                     <div class="form-group py-1">

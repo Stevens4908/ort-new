@@ -14,7 +14,7 @@ const Mesas = () => {
 
 <div class="container">
 
-    <div className='row justify-content-end px-0'>
+    <div className='row justify-content-end px-0 mt-4'>
         <div className='col-md-5 bg-info'>
             <h2>GESTIONA TUS MESAS</h2>
         </div>

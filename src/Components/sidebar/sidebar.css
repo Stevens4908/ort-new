@@ -47,11 +47,14 @@
     color: white;
     padding-left: 20px;
     padding-right: 20px;
+    
  }
 
  
- @media (min-width:720px) {
+ @media (min-width:991px) {
     .sidebar{
         display: block;
     }
  }
+
+ 

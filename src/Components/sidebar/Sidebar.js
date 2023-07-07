@@ -10,7 +10,7 @@ import { PiBookOpenTextFill } from "react-icons/pi";
 
 
 
-const Sidebar = ({colapsar}) => {
+const Sidebar = () => {
 
 
 
@@ -53,7 +53,7 @@ const Sidebar = ({colapsar}) => {
 
         <React.Fragment>
 
-             <section className={`sidebar ${colapsar ? 'colapsar' : '' } `}>
+             <section className="sidebar" >
 
                 {/*<div className="x">*/}
                     <ul>

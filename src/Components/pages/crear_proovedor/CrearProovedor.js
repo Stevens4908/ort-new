@@ -14,7 +14,7 @@ const CrearProovedor = () => {
 
 <div class="container">
 
-        <div className='row justify-content-end px-0'>
+        <div className='row justify-content-end px-0 mt-4'>
             <div className='col-md-8 bg-info'>
                 <h2>INGRESA LOS DATOS DEL PROOVEDOR</h2>
             </div>
