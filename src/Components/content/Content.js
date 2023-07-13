@@ -17,12 +17,12 @@ const Content = () => {
         {/*<div className="contenedor">*/}
                 <Routes>
 
-                    <Route path="/" element="" />
-                    <Route path="/agregarequipos" element={<AgregarEquipo/>} />
-                    <Route path="/mesas" element={<Mesas/>}>   
+                    
+                    <Route path="agregarequipos" element={<AgregarEquipo/>} />
+                    <Route path="/mesas" element={<Mesas/>}/>   
                         
-                    </Route>
-                    <Route path="mesas/equis" element={<Equis/>}></Route>
+                   
+                    <Route path="mesas/equis" element={<Equis/>}/>
                     <Route path="/crearcupon" element={<CrearCupon/>}/>
                     <Route path="/crearproovedor" element={<CrearProovedor/>}/>
                     <Route path="/costosfijos" element={<CostosFijos/>}/>

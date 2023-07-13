@@ -3,7 +3,9 @@ import Header from "../header/Header";
 import Sidebar from "../sidebar/Sidebar";
 import Content from "../content/Content";
 import '../dashboard/dashboard.css'
-import { BrowserRouter as Router } from "react-router-dom";
+//import { BrowserRouter as Router } from "react-router-dom";
+//import { Route, Routes } from "react-router-dom"
+//import Login from "../logins/Login";
 
 
 
@@ -18,8 +20,6 @@ return(
 
 
 
-    <Router>
-
           <div className="dashboard">
 
               <Header  />
@@ -29,11 +29,7 @@ return(
    
           </div>
 
-
-
-    </Router>
       
-     
 
       
   </React.Fragment>
