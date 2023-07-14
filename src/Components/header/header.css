@@ -1,6 +1,6 @@
 .header{
 
-    background-color: rgb(255, 171, 171);
+    background-color: rgb(255, 255, 255);
     grid-area: header;
     z-index: 2;
 }
@@ -33,7 +33,7 @@ z-index: 3;
 
 .res-sidebar li{
     list-style: none;
-    line-height: 40px;
+    line-height: 90px;
     font-size: 1.5rem;
 }
 

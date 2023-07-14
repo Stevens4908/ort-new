@@ -19,17 +19,17 @@ return(
 <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Nombre Completo</Form.Label>
-        <Form.Control type="text" placeholder="enter name" />
+        <Form.Control type="text" placeholder="" />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Correo Electronico</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Control type="email" placeholder="" />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Telefono</Form.Label>
-        <Form.Control type="text" placeholder="Phone" />
+        <Form.Control type="text" placeholder="" />
       </Form.Group>
 
       <Button variant="primary" type="submit">

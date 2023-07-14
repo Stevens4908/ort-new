@@ -30,7 +30,7 @@ const  Logins  = () => {
         const isCredentialsValid = User === "sha" && Contra === "1234";
         
         if(isCredentialsValid) {
-            window.location.href = "/"
+            window.location.href = "dashboard"
          }
          else {
              alert("credenciales incorrectas")
@@ -39,14 +39,14 @@ const  Logins  = () => {
   
 return(
 
-  <React.Fragment>
+<React.Fragment>
 
 <Container className="pt-5">
 
     <Form >
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>
-        <Form.Control type="text" placeholder="Enter email" value={User}  onChange={handleEmailChange} />
+        <Form.Control type="text" placeholder="" value={User}  onChange={handleEmailChange} />
         <Form.Text className="text-muted">
          
         </Form.Text>
@@ -54,7 +54,7 @@ return(
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Contraseña</Form.Label>
-        <Form.Control type="password" placeholder="Password" value={Contra} onChange={handlePasswordChange} />
+        <Form.Control type="password" placeholder="" value={Contra} onChange={handlePasswordChange} />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Recordar mis datos" />
@@ -76,7 +76,7 @@ return(
      
 
       
-  </React.Fragment>
+</React.Fragment>
    
 )
 

@@ -31,7 +31,7 @@ const Header = () => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleLinkClick  = () => setShow(false);
 
 
 
@@ -87,15 +87,15 @@ return(
             <div className="res-sidebar">
                     <ul>
                         {lista.map((item, index) => (
-                        <li key={index}>
-                            <Link to={item.to} className={item.className}>
+                        <li key={index} >
+                            <Link to={item.to} className={item.className} onClick={handleLinkClick}>
                             {item.icon} {item.text}
                             </Link>
                         </li>
                             ))}
                     </ul>
                             <div className="container text-center">
-                                <button className="boton">Menu</button>
+                                <Link to="menu"> <button className="boton " onClick={handleLinkClick}>   Menu   </button> </Link>
                             </div>
             </div>
                     
@@ -114,17 +114,17 @@ return(
             <div className="row ">
 
                 <div className="col-2 col-md-1">
-                    <Button variant="primary" className="d-lg-none" onClick={handleShow}>
+                    <Button variant="primary" className="d-lg-none" onClick={() => setShow(true)}>
                     <i ><FaBars /></i>
                     </Button>
                 </div>
 
-                <div className="col-7 col-md-4 bg-info">
+                <div className="col-7 col-md-4 ">
                     <div className="row">
                         <div className="col-7  px-0">
-                            <h5 className="text-start">Buenas tardes:</h5>
-                            <h5 className="text-start">ID/Usuario</h5>
-                            <p className="text-white text-end headhide">Recuerda completar tus tareas</p>
+                            <h5 className="text-center">Buenas tardes:</h5>
+                            <h5 className="text-center">ID/Usuario</h5>
+                            <p className="text-dark text-end headhide">Recuerda completar tus tareas</p>
                         </div>
                         
                         <div className="col-2 d-flex">
@@ -139,7 +139,7 @@ return(
                     </div>
                 </div>
 
-                <div className="col-4 col-md-4 bg-warning headhide">
+                <div className="col-4 col-md-4  headhide">
                             <h5 className="text-center">Tienes dudas? Contactanos</h5>
                             <div className="row justify-content-center">
                                 
@@ -163,7 +163,7 @@ return(
                             </div>
                 </div>
 
-                <div className="col-3 col-md-2 bg-success">
+                <div className="col-3 col-md-2 ">
 
                 </div>
             </div>
@@ -178,167 +178,7 @@ return(
 
 
     
-{/*
-
-<Navbar expand="lg" className="bg-body-tertiary bg-info">
-      <Container fluid className="bg-warning">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div className="row pt-0">
-        <div className="col-md-12">
-            <div className="row">
-
-                <div className="col-md-5">
-                    <div className="row">
-                        <div className="col-md-9  px-0">
-                            <h5 className="text-end">Buenas tardes:</h5>
-                            <h5 className="text-end">ID/Usuario</h5>
-                            <h4 className="text-info text-end">Recuerda completar tus tareas</h4>
-                        </div>
-                        
-                        <div className="col-md-3 d-flex">
-                            <div className="row d-flex align-items-start">
-                                <div className="col-md-12">
-                                        <i style={{fontSize: "4rem"}} className="pt-0" ><FaCircleUser/></i>
-                                </div>
-                                    
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-md-3  headhide">
-                            <h5 className="text-center">Tienes dudas? Contactanos</h5>
-                            <div className="row justify-content-center">
-                                
-                                    <div className="col-md-1 text-end">
-                                            <FaLocationDot/>
-                                    </div>
-                                    <div className="col-md-1">
-                                            <BsTelephoneFill/>
-                                    </div>
-                                    <div className="col-md-1 text-start">
-                                            <IoMdMail/>
-                                    </div>
- 
-                            </div>
-                            <div className="row justify-content-center pt-3" >
-                                <div className="col-md-1"><i><FaFacebook/></i></div>
-                                <div className="col-md-1"><i><FaFacebookMessenger/></i></div>
-                                <div className="col-md-1"><i><FaInstagram/></i></div>
-                                <div className="col-md-1"><i><FaTwitter/></i></div>
-                                <div className="col-md-1"><i><FaTiktok/></i></div>
-                            </div>
-                </div>
-
-                <div className="col-md-3 bg-success">
-
-                </div>
-            </div>
-        </div>
-    </div>           
-
-
-
-</Container>
-    </Navbar>
-
-                      */  }
-
-        {/*<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-
-
-
-
-         
-          </Nav>
-
-                        </Navbar.Collapse>*/}
-
-      
-
-
-
-
-
-
-
-
-
-{/*<div className="container">
-    <div className="row pt-1">
-        <div className="col-md-12">
-            <div className="row">
-
-                <div className="col-md-5">
-                    <div className="row">
-                        <div className="col-md-9  px-0">
-                            <h5 className="text-end">Buenas tardes:</h5>
-                            <h5 className="text-end">ID/Usuario</h5>
-                            <h4 className="text-info text-end">Recuerda completar tus tareas</h4>
-                        </div>
-                        
-                        <div className="col-md-3 d-flex separador">
-                            <div className="row d-flex align-items-start">
-                                <div className="col-md-12">
-                                        <i style={{fontSize: "4rem"}} className="pt-0" ><FaCircleUser/></i>
-                                </div>
-                                    
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-md-3  ">
-                            <h5 className="text-center">Tienes dudas? Contactanos</h5>
-                            <div className="row justify-content-center">
-                                
-                                    <div className="col-md-1 text-end">
-                                            <FaLocationDot/>
-                                    </div>
-                                    <div className="col-md-1">
-                                            <BsTelephoneFill/>
-                                    </div>
-                                    <div className="col-md-1 text-start">
-                                            <IoMdMail/>
-                                    </div>
- 
-                            </div>
-                            <div className="row justify-content-center pt-4" >
-                                <div className="col-md-1"><i><FaFacebook/></i></div>
-                                <div className="col-md-1"><i><FaFacebookMessenger/></i></div>
-                                <div className="col-md-1"><i><FaInstagram/></i></div>
-                                <div className="col-md-1"><i><FaTwitter/></i></div>
-                                <div className="col-md-1"><i><FaTiktok/></i></div>
-                            </div>
-                </div>
-
-                <div className="col-md-3 bg-success">
-
-                </div>
-            </div>
-        </div>
-    </div>           
-</div>
-*/}    
+  
 
 
 </header>

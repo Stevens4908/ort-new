@@ -15,6 +15,7 @@ import CrearProovedor from "../src/Components/pages/crear_proovedor/CrearProoved
 import CostosFijos from "../src/Components/pages/costos_fijos/CostosFijos"
 import Forgot from './Components/accesos/forms/Forgot';
 import Register from './Components/accesos/forms/Register';
+import Menu from './Components/pages/menu/Menu';
 
 function App() {
  
@@ -24,35 +25,36 @@ function App() {
 <React.Fragment>
 
 
- <Router>
+<Router>
 
-    <Routes>
+  <Routes>
 
-      <Route path='access/' element={<Acceso/>}>
+    <Route path='/' element={<Acceso/>}>
         <Route path="forgot" element={<Forgot/>} />
         <Route path="register" element={<Register/>} />
-      </Route>
+    </Route>
 
 
-    <Route path="/" element={<Dashboard/>} >
+    <Route path="dashboard" element={<Dashboard/>} >
        
         <Route path="agregarequipos" element={<AgregarEquipo/>} />
-        <Route path="/mesas" element={<Mesas/>}/>   
+        <Route path="mesas" element={<Mesas/>}/>   
                           
                     
         <Route path="mesas/equis" element={<Equis/>}/>
-        <Route path="/crearcupon" element={<CrearCupon/>}/>
-        <Route path="/crearproovedor" element={<CrearProovedor/>}/>
-        <Route path="/costosfijos" element={<CostosFijos/>}/>
+        <Route path="crearcupon" element={<CrearCupon/>}/>
+        <Route path="crearproovedor" element={<CrearProovedor/>}/>
+        <Route path="costosfijos" element={<CostosFijos/>}/>
+        <Route path="menu" element={<Menu/>}/>
 
     </Route>
 
 
      
 
-    </Routes>
+  </Routes>
 
- </Router>
+</Router>
 
     
 

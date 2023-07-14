@@ -1,7 +1,7 @@
 import React from "react"
 import '../sidebar/sidebar.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 import {FaPeopleGroup} from 'react-icons/fa6' 
 import {MdTableBar} from 'react-icons/md' 
 import {RiCoupon3Fill  } from "react-icons/ri";
@@ -12,6 +12,7 @@ import { PiBookOpenTextFill } from "react-icons/pi";
 
 const Sidebar = () => {
 
+   
 
 
     const lista = [
@@ -53,26 +54,27 @@ const Sidebar = () => {
 
         <React.Fragment>
 
-             <section className="sidebar" >
+            <section className="sidebar" >
 
                 {/*<div className="x">*/}
                     <ul>
                         {lista.map((item, index) => (
                         <li key={index}>
-                            <Link to={item.to} className={item.className}>
+                            <NavLink to={item.to} className={item.className}  >
                             {item.icon} {item.text}
-                            </Link>
+                            </NavLink>
                         </li>
                             ))}
                     </ul>
                             <div className="container text-center">
-                                <button className="boton">Menu</button>
+                                <Link to="menu"> <button className="boton ">   Menu     </button> </Link>
                             </div>
                            
                 {/*</div>*/}
                 
                 
-             </section>
+            </section>
+
 
         </React.Fragment>
 
