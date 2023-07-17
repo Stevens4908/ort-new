@@ -22,7 +22,7 @@ z-index: 3;
   .offcanvas{
     
     width: 70vw !important;
-    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
   }
 
   .res-sidebar ul{

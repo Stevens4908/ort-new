@@ -11,7 +11,7 @@ import '../dashboard/dashboard.css'
 
 
 
-const  Dashboard  = () => {
+const  Dashboard  = ({cerrar}) => {
 
 
   
@@ -21,8 +21,8 @@ return(
 
 
           <div className="dashboard">
-
-              <Header  />
+          
+              <Header  cerrar={cerrar}/>
               <Sidebar  />
               <Content/>
 

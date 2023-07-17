@@ -9,7 +9,7 @@ const AgregarEquipo = () => {
 
         <React.Fragment>
 
-<div class="container">
+<div className="container">
 
     <div className='row justify-content-end px-0 mt-4'>
         <div className='col-md-5 bg-info'>
@@ -18,7 +18,7 @@ const AgregarEquipo = () => {
     </div>
 
     <div className="row py-5 justify-content-center">
-        <div class="col-md-6 text-center list-group-item list-group-item">
+        <div className="col-md-6 text-center list-group-item list-group-item">
             <form className='py-5'>
                 
                 <div className="form-group p-1">

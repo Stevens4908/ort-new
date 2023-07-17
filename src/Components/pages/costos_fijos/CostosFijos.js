@@ -12,7 +12,7 @@ const CostosFijos = () => {
 
         <React.Fragment>
 
-<div class="container">
+<div className="container">
 
         <div className='row justify-content-end px-0 mt-4'>
             <div className='col-md-8 bg-info'>
@@ -21,22 +21,22 @@ const CostosFijos = () => {
         </div>
 
         <br/>
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-6" id="formulario">
+        <div className="row justify-content-center mt-5">
+            <div className="col-md-6" id="formulario">
                 <form>
-                    <div class="form-group py-1">
+                    <div className="form-group py-1">
                         <input type="nombre" class="form-control" id="exampleInputNombre" aria-describedby="emailHelp"
                             placeholder="Nombre" />
                     </div>
-                    <div class="form-group py-1">
+                    <div className="form-group py-1">
                         <input type="valor" class="form-control" id="exampleInputValor" placeholder="Valor" />
                     </div>
 
-                    <div class="form-group py-1">
+                    <div className="form-group py-1">
                         <input type="costo" class="form-control" id="exampleInputCosto" placeholder="Costo" />
                     </div>
 
-                    <div class="row justify-content-center py-4">
+                    <div className="row justify-content-center py-4">
                         <div className='col-md-6 text-center'>
                             <button type="submit" class="btn btn-primary">CREAR COSTO</button>
                         </div>

@@ -26,7 +26,7 @@ import Container from 'react-bootstrap/Container';
 
 
 
-const Header = () => {
+const Header = ({cerrar}) => {
 
     const [show, setShow] = useState(false);
 
@@ -124,7 +124,7 @@ return(
                         <div className="col-7  px-0">
                             <h5 className="text-center">Buenas tardes:</h5>
                             <h5 className="text-center">ID/Usuario</h5>
-                            <p className="text-dark text-end headhide">Recuerda completar tus tareas</p>
+                            <p className="text-dark text-end headhide" onClick={cerrar} style={{cursor:'pointer'}}>Cerrar sesión</p>
                         </div>
                         
                         <div className="col-2 d-flex">

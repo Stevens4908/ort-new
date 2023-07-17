@@ -35,6 +35,9 @@ const  Logins  = () => {
          else {
              alert("credenciales incorrectas")
          }
+
+         localStorage.setItem('sha' , '1234')
+
         }
   
 return(
