@@ -25,8 +25,8 @@ function App() {
  const [User, setUser] = useLocalStorage('sha')
 
  const cerrar = () => {
-setUser(false)
-window.location.href = "/"
+  setUser(false)
+  window.location.href = "/"
 
 }
   

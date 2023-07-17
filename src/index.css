@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.color-ortellus{
+  color: #186B87 !important;
+}
+
+.fondo-ortellus{
+  background-color: #186B87 !important;
+}

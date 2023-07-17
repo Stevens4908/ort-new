@@ -2,9 +2,11 @@ import React, {useState} from "react"
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, FormGroup } from "react-bootstrap";
+import { Col, Container, FormGroup, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import '../acceso.css'
+import logo from '../../../assets/images/logo.png'
+import text from '../../../assets/images/logo-text.png'
 
 
 
@@ -44,7 +46,14 @@ return(
 
 <React.Fragment>
 
-<Container className="pt-5">
+<Container className="pt-1">
+  
+    <Row className="justify-content-center pt-2 pb-4"> 
+      <h3 className="text-center color-ortellus">BIENVENIDOS A </h3>
+      <Col md={5} xs={4} >
+      <img src={text} className="img-fluid" alt="logo-text"></img>
+      </Col>
+    </Row>
 
     <Form >
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -63,15 +72,22 @@ return(
         <Form.Check type="checkbox" label="Recordar mis datos" />
       </Form.Group>
       <FormGroup>
-        <Form.Text className="text-muted">
-         OLVIDASTE TU CONTRASEÑA? <Link to="forgot">INGRESA AQUI</Link>
+        <Form.Text className="text-muted ">
+         OLVIDASTE TU CONTRASEÑA? <Link to="forgot" className="enlace-simple color-ortellus">INGRESA AQUI</Link>
         </Form.Text>
-        <Link to="register"><h4>REGISTRATE AQUI</h4></Link>
+        <Link to="register" className="enlace-simple"><h4 className="text-center color-ortellus">REGISTRATE AQUI</h4></Link>
       </FormGroup>
-      <Button variant="primary" type="submit" onClick={handleLogin}>
+
+      <Button className="offset-4 fondo-ortellus" variant="success" type="submit" onClick={handleLogin}>
         Iniciar Sesión
       </Button>
     </Form>
+
+    <Row className="justify-content-center pt-3"> 
+      <Col md={6} xs={4} >
+        <img src={logo} className="img-fluid" alt="logo"></img>
+      </Col>
+    </Row>
     
 </Container>
 

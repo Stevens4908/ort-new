@@ -24,7 +24,7 @@ return(
         <div className="container contenedor-acceso">
 
                 <div className="row ">
-                    <div className="col-md-12 col-10 ">
+                    <div className="col-md-12 col-12 ">
                         <Routes>
                             <Route path="" element={<Logins/>} />
                             <Route path="forgot" element={<Forgot/>} />
