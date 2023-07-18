@@ -18,6 +18,7 @@ import Register from './Components/accesos/forms/Register';
 import Menu from './Components/pages/menu/Menu';
 import ProtectedRoutes from './Components/utils/ProtectedRoutes';
 import { useLocalStorage } from 'react-use';
+import Rol from './Components/accesos/forms/Rol';
 //import Header from './Components/header/Header';
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
     <Route path='/' element={<Acceso/>}>
         <Route path="forgot" element={<Forgot/>} />
         <Route path="register" element={<Register/>} />
+        <Route path="rol" element={<Rol/>} />
     </Route>
 
     <Route element={<ProtectedRoutes canActivate={User}/>}>

@@ -13,7 +13,7 @@
 }
 
 .x{
-   background-color: rgba(0, 0, 0, 0.6);
+   background-color: rgba(0, 0, 0, 0.7);
    height: 80vh;
     margin-left: 20%;
     margin-top: 40px;
@@ -47,10 +47,9 @@
 
  .boton {
     border-radius: 50px;
-    background-color: rgb(4, 4, 153);
+    background-color:  #186B87 !important;
     color: white;
-    padding-left: 20px;
-    padding-right: 20px;
+   padding: 3% 10% 3% 10%;
     
  }
 

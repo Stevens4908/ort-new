@@ -15,8 +15,8 @@ const CrearCupon = ({cerrar}) => {
 <div className="container">
 
     <div className='row justify-content-end px-0 pt-4'>
-        <div className='col-md-5 bg-info'>
-            <h2>CREA TUS CUPONES</h2>
+        <div className='col-md-5 fondo-ortellus bordes'>
+            <h2 className='text-white'>CREA TUS CUPONES</h2>
         </div>
     </div>
 
@@ -38,7 +38,7 @@ const CrearCupon = ({cerrar}) => {
 
                     <div className="row justify-content-center py-4">
                         <div className='col-md-5 text-center'>
-                            <button type="submit" class="btn btn-primary">REGISTRAR</button>
+                            <button type="submit" class="btn btn-primary fondo-ortellus">REGISTRAR</button>
                         </div>
                         
                     </div>

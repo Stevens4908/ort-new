@@ -15,8 +15,8 @@ const CostosFijos = () => {
 <div className="container">
 
         <div className='row justify-content-end px-0 mt-4'>
-            <div className='col-md-8 bg-info'>
-                <h2>INGRESA LOS COSTOS DE TU NEGOCIO</h2>
+            <div className='col-md-7 fondo-ortellus bordes'>
+                <h2 className='text-white'>INGRESA LOS COSTOS DE TU NEGOCIO</h2>
             </div>
         </div>
 
@@ -38,7 +38,7 @@ const CostosFijos = () => {
 
                     <div className="row justify-content-center py-4">
                         <div className='col-md-6 text-center'>
-                            <button type="submit" class="btn btn-primary">CREAR COSTO</button>
+                            <button type="submit" class="btn btn-primary fondo-ortellus">CREAR COSTO</button>
                         </div>
                         
                     </div>

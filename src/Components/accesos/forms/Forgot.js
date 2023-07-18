@@ -20,7 +20,7 @@ return(
   
 
     <div className='row justify-content-end px-0 pt-4 pb-4'>
-        <div className='col-md-11 fondo-ortellus '>
+        <div className='col-md-10 fondo-ortellus bordes'>
             <h3 className="text-white">OLVIDÉ MI CONTRASEÑA</h3>
         </div>
     </div>

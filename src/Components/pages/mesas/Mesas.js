@@ -15,8 +15,8 @@ const Mesas = () => {
 <div class="container">
 
     <div className='row justify-content-end px-0 mt-4'>
-        <div className='col-md-5 bg-info'>
-            <h2>GESTIONA TUS MESAS</h2>
+        <div className='col-md-5 fondo-ortellus bordes'>
+            <h2 className='text-white'>GESTIONA TUS MESAS</h2>
         </div>
     </div>
 
@@ -35,7 +35,7 @@ const Mesas = () => {
                 </div>
                 
                 
-                <button type="submit" class="btn btn-primary">REGISTRAR</button>
+                <button type="submit" class="btn btn-primary fondo-ortellus mt-3">REGISTRAR</button>
 
             </form>
             <Link to="equis" className='text-dark'>ir a x</Link>

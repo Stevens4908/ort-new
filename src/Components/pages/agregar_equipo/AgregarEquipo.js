@@ -12,8 +12,8 @@ const AgregarEquipo = () => {
 <div className="container">
 
     <div className='row justify-content-end px-0 mt-4'>
-        <div className='col-md-5 bg-info'>
-            <h2>COMPLETA TUS DATOS</h2>
+        <div className='col-md-5 fondo-ortellus bordes'>
+            <h2 className='text-white'>COMPLETA TUS DATOS</h2>
         </div>
     </div>
 
@@ -51,7 +51,7 @@ const AgregarEquipo = () => {
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Direccion"/>
                 </div>
                 
-                <button type="submit" class="btn btn-primary">REGISTRAR</button>
+                <button type="submit" class="btn btn-primary fondo-ortellus mt-4">REGISTRAR</button>
 
             </form>
       </div>

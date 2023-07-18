@@ -15,8 +15,8 @@ const CrearProovedor = () => {
 <div className="container">
 
         <div className='row justify-content-end px-0 mt-4'>
-            <div className='col-md-8 bg-info'>
-                <h2>INGRESA LOS DATOS DEL PROOVEDOR</h2>
+            <div className='col-md-7 fondo-ortellus bordes'>
+                <h2 className='text-white'>INGRESA LOS DATOS DEL PROOVEDOR</h2>
             </div>
         </div>
 
@@ -38,7 +38,7 @@ const CrearProovedor = () => {
 
                     <div className="row justify-content-center py-4">
                         <div className='col-md-6  text-center'>
-                                <button type="submit" class="btn btn-primary ">REGISTRAR</button>
+                                <button type="submit" class="btn btn-primary fondo-ortellus">REGISTRAR</button>
                         </div>
                         
                     </div>

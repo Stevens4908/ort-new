@@ -6,6 +6,7 @@ import Logins from "./forms/Logins";
 import Forgot from "./forms/Forgot";
 import Register from "./forms/Register";
 import { Route, Routes } from "react-router-dom"
+import Rol from "./forms/Rol";
 
 
 
@@ -29,6 +30,7 @@ return(
                             <Route path="" element={<Logins/>} />
                             <Route path="forgot" element={<Forgot/>} />
                             <Route path="register" element={<Register/>} />
+                            <Route path="rol" element={<Rol/>} />
                         </Routes>
                     </div>
                 </div>
