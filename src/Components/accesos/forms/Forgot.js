@@ -2,7 +2,7 @@ import React from "react"
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Stack } from "react-bootstrap";
 import logo from '../../../assets/images/logo.png'
 
 
@@ -23,7 +23,7 @@ return(
   <Row className="px-0">
 
       <div className='row justify-content-end px-0 pt-4 pb-4'>
-          <div className='col-md-10 col-9 fondo-ortellus bordes'>
+          <div className='col-md-10 col-11 fondo-ortellus bordes'>
               <h3 className="text-white">OLVIDÉ MI CONTRASEÑA</h3>
           </div>
       </div>
@@ -35,9 +35,9 @@ return(
               <Form.Control type="email" placeholder="" />
             </Form.Group>
 
-            <Button variant="success" type="submit" className="offset-5 fondo-ortellus" >
-              ENVIAR
-            </Button>
+                <Stack gap={1} className="col-5 mx-auto">
+                  <Button variant="secondary" type="submit" className="fondo-ortellus ">ENVIAR</Button> 
+                </Stack>
       </Form>
 
       <Form>
@@ -47,13 +47,14 @@ return(
               <Form.Control type="text" placeholder="" />
             </Form.Group>
 
-            <Button  variant="success" type="submit" className="fondo-ortellus offset-5">
-              ENVIAR
-            </Button>
+
+                <Stack gap={1} className="col-5 mx-auto">
+                  <Button variant="secondary" type="submit" className="fondo-ortellus ">ENVIAR</Button> 
+                </Stack>
       </Form>
 
       <Row className="justify-content-center pt-3"> 
-        <Col md={6} xs={4} >
+        <Col md={6} xs={6} >
           <img src={logo} className="img-fluid" alt="logo"></img>
         </Col>
       </Row>

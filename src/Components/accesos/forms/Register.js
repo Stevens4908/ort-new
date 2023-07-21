@@ -2,7 +2,7 @@ import React from "react"
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Stack} from "react-bootstrap";
 import logo from '../../../assets/images/logo.png'
 
 
@@ -40,14 +40,14 @@ return(
             <Form.Control type="text" placeholder="" />
           </Form.Group>
 
-          <Button variant="success" type="submit" className="offset-4 fondo-ortellus">
-            REGISTRARSE
-          </Button>
+                <Stack gap={1} className="col-5 mx-auto">
+                  <Button variant="secondary" type="submit" className="fondo-ortellus ">REGISTRARSE</Button> 
+                </Stack>
     </Form>
 
 
         <Row className="justify-content-center pt-3"> 
-          <Col md={6} xs={4} >
+          <Col md={6} xs={6} >
             <img src={logo} className="img-fluid" alt="logo"></img>
           </Col>
         </Row>

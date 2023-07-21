@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Col, Container, FormGroup, Row } from "react-bootstrap";
+import { Col, Container, FormGroup, Row, Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import '../acceso.css'
 import logo from '../../../assets/images/logo.png'
@@ -54,7 +54,7 @@ return(
   
     <Row className="justify-content-center  pb-4"> 
       <h3 className="text-center color-ortellus">BIENVENIDOS A </h3>
-      <Col md={5} xs={4} >
+      <Col md={5} xs={5} >
       <img src={text} className="img-fluid" alt="logo-text"></img>
       </Col>
     </Row>
@@ -82,13 +82,15 @@ return(
         <Link to="register" className="enlace-simple"><h4 className="text-center color-ortellus">REGISTRATE AQUI</h4></Link>
       </FormGroup>
 
-      <Button className="offset-4 fondo-ortellus" variant="success" type="submit" onClick={handleLogin}>
-        Iniciar Sesión
-      </Button>
+    
+
+                <Stack gap={1} className="col-6 mx-auto">
+                  <Button variant="secondary" type="submit" className="fondo-ortellus " onClick={handleLogin}>INICIAR SESION</Button> 
+                </Stack>
     </Form>
 
     <Row className="justify-content-center pt-3"> 
-      <Col md={6} xs={4} >
+      <Col md={6} xs={6} >
         <img src={logo} className="img-fluid" alt="logo"></img>
       </Col>
     </Row>
