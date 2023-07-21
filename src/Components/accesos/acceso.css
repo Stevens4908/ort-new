@@ -1,13 +1,14 @@
 .acceso{
     height: 100vh;
     
-    background-image: url("../../assets/images/lobox.jpg");
+    background-image: url("../../assets/images/alpha-wolf.jpg");
 
    background-repeat: no-repeat;
    background-size:cover;
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center
+    justify-content: center; 
+    align-items: center;
+    padding-right: 0;
 }
 
 .contenedor-acceso{
@@ -28,7 +29,7 @@
 }
 
 
-@media(min-width: 720px){
+@media(min-width: 920px){
 
     .contenedor-acceso{
         width: 30vw;

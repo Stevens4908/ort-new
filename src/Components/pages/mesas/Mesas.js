@@ -1,7 +1,10 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Link } from 'react-router-dom';
-
+import {  NavLink, Outlet } from 'react-router-dom';
+import { Col, Container, Row } from 'react-bootstrap';
+import {MdTableBar} from 'react-icons/md' 
+import '../mesas/mesas.css'
+import {FaCircleUser} from 'react-icons/fa6' 
 
 const Mesas = () => {
 
@@ -10,42 +13,24 @@ const Mesas = () => {
     return (
 
 
-        <React.Fragment>
+<React.Fragment>
 
-<div class="container">
+    <Container fluid>
 
-    <div className='row justify-content-end px-0 mt-4'>
-        <div className='col-md-5 fondo-ortellus bordes'>
-            <h2 className='text-white'>GESTIONA TUS MESAS</h2>
-        </div>
-    </div>
+        <Row className='fondo-ortellus xu ' >
+            <Col md={3} xs={5} className='' style={{borderRight:"1px solid white"}}> <NavLink className="iconos-mesas" to="numeromesas"> <Row><Col xs={2} md={2}><MdTableBar/></Col> <Col xs={9} md={9}>Numero de Mesas</Col></Row> </NavLink> </Col>
+            <Col md={3} xs={5} className=''> <NavLink className="iconos-mesas" to="mesasatendidas"> <Row><Col xs={2} md={2}><MdTableBar/></Col>  <Col xs={9} md={9}>Mesas Atendidas</Col></Row>   </NavLink> </Col>
+            <Col md={6} xs={2} className=' d-flex justify-content-center '>
+                <Row className=''> <Col md={12} className='d-flex  align-items-center' > <FaCircleUser className='' style={{fontSize:"3em"}}/></Col> 
+                </Row>  
+            </Col>
+        </Row>
 
-    <div class="row py-5 mt-5 justify-content-center">
-        <div class="col-md-5 text-center list-group-item  ">
-            <form>
+    </Container>
+              
+    <Outlet/>
 
-                <div class="form-group p-1">
-                {/*<label for="exampleInputEmail1">NUMERO DE MESAS</label>*/}
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Numero De Mesas"/>               
-                </div>
-                
-                <div class="form-group p-1">
-                {/*<label for="exampleInputPassword1">CAPACIDAD</label>*/}
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Capacidad"/>
-                </div>
-                
-                
-                <button type="submit" class="btn btn-primary fondo-ortellus mt-3">REGISTRAR</button>
-
-            </form>
-            <Link to="equis" className='text-dark'>ir a x</Link>
-
-       </div>
-    </div>
-</div>
-               
-
-        </React.Fragment>
+</React.Fragment>
 
 
     )

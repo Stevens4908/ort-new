@@ -2,3 +2,22 @@
 
     z-index: 3;
 }
+
+.iconos-mesas{
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+}
+
+.xu .active {
+    color: black;
+}
+
+
+@media(min-width:520px) {
+    .iconos-mesas{
+        font-size: 2em;
+        text-decoration: none;
+        color: white;
+    }
+}

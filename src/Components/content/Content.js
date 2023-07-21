@@ -8,6 +8,9 @@ import CrearCupon from "../pages/crear_cupon/CrearCupon"
 import CrearProovedor from "../pages/crear_proovedor/CrearProovedor"
 import CostosFijos from "../pages/costos_fijos/CostosFijos"
 import Menu from "../pages/menu/Menu"
+import NumeroMesas from "../pages/mesas/NumeroMesas"
+import MesasAtendidas from "../pages/mesas/MesasAtendidas"
+import GestionMesas from "../pages/mesas/GestionMesas"
 
 const Content = () => {
 
@@ -20,10 +23,19 @@ const Content = () => {
 
                     
                     <Route path="agregarequipos" element={<AgregarEquipo/>} />
-                    <Route path="/mesas" element={<Mesas/>}/>   
-                        
+
+                    <Route path="mesas" element={<Mesas/>}>
+                        <Route path="equis" element={<Equis/>}/>
+                        <Route path="numeromesas" element={<NumeroMesas/>}>
+                           
+                        </Route>
+                        <Route path="mesasatendidas" element={<MesasAtendidas/>}/>
+                        <Route path="gestionmesas" element={<GestionMesas/>}/>
+                    </Route>  
+                         
                    
-                    <Route path="mesas/equis" element={<Equis/>}/>
+                    
+
                     <Route path="/crearcupon" element={<CrearCupon/>}/>
                     <Route path="/crearproovedor" element={<CrearProovedor/>}/>
                     <Route path="/costosfijos" element={<CostosFijos/>}/>

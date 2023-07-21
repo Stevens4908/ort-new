@@ -1,13 +1,15 @@
 body{
     margin: 0;
-    background-image: url("../../assets/images/wolf.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-
+    /**/
+    
+    background-color: rgb(246, 246, 246);
     
 }
 
 .dashboard{
+    background-image: url("../../assets/images/wolf.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 
     display: grid;
     height: 100vh;

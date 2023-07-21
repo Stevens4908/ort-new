@@ -19,3 +19,10 @@ code {
 .fondo-ortellus{
   background-color: #186B87 !important;
 }
+
+.centrar{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 90vh;
+}

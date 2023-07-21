@@ -19,6 +19,9 @@ import Menu from './Components/pages/menu/Menu';
 import ProtectedRoutes from './Components/utils/ProtectedRoutes';
 import { useLocalStorage } from 'react-use';
 import Rol from './Components/accesos/forms/Rol';
+import NumeroMesas from './Components/pages/mesas/NumeroMesas';
+import MesasAtendidas from './Components/pages/mesas/MesasAtendidas';
+import GestionMesas from './Components/pages/mesas/GestionMesas';
 //import Header from './Components/header/Header';
 
 function App() {
@@ -50,10 +53,20 @@ function App() {
       <Route path="dashboard" element={<Dashboard cerrar={cerrar}/>} >
         
           <Route path="agregarequipos" element={<AgregarEquipo/>} />
-          <Route path="mesas" element={<Mesas/>}/>   
-                            
+
+          <Route path="mesas" element={<Mesas/>}>
+              <Route path="equis" element={<Equis/>}/>
+              <Route path="numeromesas" element={<NumeroMesas/>}>
+                    
+                    
+              </Route>
+              <Route path="gestionmesas" element={<GestionMesas/>}/>
+              <Route path="mesasatendidas" element={<MesasAtendidas/>}/>  
+          </Route>   
+                         
                       
-          <Route path="mesas/equis" element={<Equis/>}/>
+          
+
           <Route path="crearcupon" element={<CrearCupon />}/>
           <Route path="crearproovedor" element={<CrearProovedor/>}/>
           <Route path="costosfijos" element={<CostosFijos/>}/>

@@ -8,13 +8,13 @@ import logo from '../../../assets/images/logo.png'
 const Rol = () => {
   return (
     
-    <React.Fragment>
+<React.Fragment>
 
 
-        <Container className='pt-5'>
+    <Container className='centrar'>
+        <Row >
 
-
-                <Row className="justify-content-center pt-2 pb-4"> 
+                <Row className="justify-content-center  pb-4"> 
                         <h3 className="text-center color-ortellus">Bienvenidos a </h3>
                     <Col md={5} xs={4} >
                         <img src={text} className="img-fluid" alt="logo-text"></img>
@@ -56,9 +56,11 @@ const Rol = () => {
                     </Col>
                 </Row>
 
-        </Container>
+        </Row>
 
-    </React.Fragment>
+    </Container>
+
+</React.Fragment>
 
 
 
