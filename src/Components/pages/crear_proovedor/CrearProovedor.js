@@ -25,15 +25,15 @@ const CrearProovedor = () => {
             <div className="col-md-6 " id="formulario">
                 <form>
                     <div className="form-group py-1">
-                        <input type="nombre" class="form-control" id="exampleInputNombre" aria-describedby="emailHelp"
+                        <input type="text" class="form-control" id="exampleInputNombre" aria-describedby="emailHelp"
                             placeholder="Nombre" />
                     </div>
                     <div className="form-group py-1">
-                        <input type="nit" class="form-control" id="exampleInputNit" placeholder="Nit" />
+                        <input type="text" class="form-control" id="exampleInputNit" placeholder="Nit" />
                     </div>
 
                     <div className="form-group py-1">
-                        <input type="direccion" class="form-control" id="exampleInputDireccion" placeholder="Direccion" />
+                        <input type="text" class="form-control" id="exampleInputDireccion" placeholder="Direccion" />
                     </div>
 
                     <div className="row justify-content-center py-4">

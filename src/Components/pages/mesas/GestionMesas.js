@@ -1,6 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 
 const GestionMesas = () => {
@@ -26,12 +26,12 @@ const GestionMesas = () => {
 
                 <div class="form-group p-1">
                 {/*<label for="exampleInputEmail1">NUMERO DE MESAS</label>*/}
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Numero De Mesas"/>               
+                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Numero De Mesas"/>               
                 </div>
                 
                 <div class="form-group p-1">
                 {/*<label for="exampleInputPassword1">CAPACIDAD</label>*/}
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Capacidad"/>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Capacidad"/>
                 </div>
                 
                 

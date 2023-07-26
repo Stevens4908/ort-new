@@ -1,7 +1,7 @@
 import React from 'react'
 import { Table, InputGroup, Form, Button } from 'react-bootstrap'
 import { AiOutlineSearch } from "react-icons/ai";
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const NumeroMesas = () => {
@@ -146,6 +146,7 @@ const NumeroMesas = () => {
             
             <div class="row">
                 <div class="col-md-7">
+                    
                     
                         <Table bordered responsive="lg">
                             <thead>

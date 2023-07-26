@@ -28,27 +28,27 @@ const AgregarEquipo = () => {
 
                 <div className="form-group p-1">
                 {/*<label for="exampleInputPassword1">NOMBRE</label>*/}
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nombre"/>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nombre"/>
                 </div>
 
                 <div className="form-group p-1">
                     {/*<label for="exampleInputPassword1">CEDULA</label>*/}
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Cedula"/>
+                    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Cedula"/>
                 </div>
 
                 <div className="form-group p-1">
                     {/*<label for="exampleInputPassword1">TELEFONO</label>*/}
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Telefono"/>
+                    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Telefono"/>
                 </div>
 
                 <div className="form-group p-1">
                     {/*<label for="exampleInputPassword1">CARGO</label>*/}
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Cargo"/>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Cargo"/>
                 </div>
 
                 <div className="form-group p-1">
                    {/*<label for="exampleInputPassword1">DIRECCION</label>*/} 
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Direccion"/>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Direccion"/>
                 </div>
                 
                 <button type="submit" class="btn btn-primary fondo-ortellus mt-4">REGISTRAR</button>
