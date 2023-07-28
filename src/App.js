@@ -43,14 +43,14 @@ function App() {
 
   <Routes>
 
-    <Route path='/' element={<Acceso/>}>
+    <Route path='*' element={<Acceso/>}>
         <Route path="forgot" element={<Forgot/>} />
         <Route path="register" element={<Register/>} />
         <Route path="rol" element={<Rol/>} />
     </Route>
 
     <Route element={<ProtectedRoutes canActivate={User}/>}>
-      <Route path="dashboard" element={<Dashboard cerrar={cerrar}/>} >
+      <Route path="dashboard/*" element={<Dashboard cerrar={cerrar}/>} >
         
           <Route path="agregarequipos" element={<AgregarEquipo/>} />
 

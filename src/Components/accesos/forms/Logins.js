@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Container, FormGroup, Row, Stack } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import '../acceso.css'
 import logo from '../../../assets/images/logo.png'
 import text from '../../../assets/images/logo-text.png'
@@ -13,6 +13,7 @@ import text from '../../../assets/images/logo-text.png'
 
 
 const  Logins  = () => {
+
 
     const [User, setUsername] = useState("");
     const [Contra, setPassword] = useState("");
@@ -32,6 +33,7 @@ const  Logins  = () => {
         const isCredentialsValid = User === "sha" && Contra === "1234";
         
         if(isCredentialsValid) {
+          
             window.location.href = "dashboard"
          }
          else {

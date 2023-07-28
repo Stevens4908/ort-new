@@ -7,7 +7,8 @@ import {MdTableBar} from 'react-icons/md'
 import {RiCoupon3Fill  } from "react-icons/ri";
 import { FaUserTie } from "react-icons/fa";
 import { PiBookOpenTextFill } from "react-icons/pi";
-
+import PerfectScrollbar from 'react-perfect-scrollbar'
+import 'react-perfect-scrollbar/dist/css/styles.css';
 
 
 const Sidebar = () => {
@@ -46,16 +47,18 @@ const Sidebar = () => {
         icon: <PiBookOpenTextFill/>,
         className: "text-white"   
         }
+        
+        
     ];
 
 
    
     return(
 
-        <React.Fragment>
-
+    <React.Fragment>
+        
             <section className="sidebar" >
-
+<PerfectScrollbar>
                 {/*<div className="x">*/}
                     <ul>
                         {lista.map((item, index) => (
@@ -72,11 +75,11 @@ const Sidebar = () => {
                            
                 {/*</div>*/}
                 
-                
+           </PerfectScrollbar>      
             </section>
 
-
-        </React.Fragment>
+       
+    </React.Fragment>
 
         
 

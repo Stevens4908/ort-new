@@ -11,12 +11,18 @@ import Menu from "../pages/menu/Menu"
 import NumeroMesas from "../pages/mesas/NumeroMesas"
 import MesasAtendidas from "../pages/mesas/MesasAtendidas"
 import GestionMesas from "../pages/mesas/GestionMesas"
+import 'react-perfect-scrollbar/dist/css/styles.css';
+import PerfectScrollbar from 'react-perfect-scrollbar'
 
 const Content = () => {
 
     return(
 
+
+
 <main className="content">
+    <PerfectScrollbar>
+        
 
         {/*<div className="contenedor">*/}
                 <Routes>
@@ -43,8 +49,10 @@ const Content = () => {
 
                 </Routes>
         {/*</div>*/}
-                
+    </PerfectScrollbar>     
 </main>
+ 
+
 
     )
 

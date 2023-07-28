@@ -5,150 +5,198 @@ import { Link } from 'react-router-dom';
 
 
 const NumeroMesas = () => {
+
+const menu = [
+
+{
+    producto: 'agua',
+    cantidad: '333',
+    valor: '1000',
+    className: 'text-white fondo-ortellus'
+},
+{
+    producto: 'gaseosa',
+    cantidad: '233',
+    valor:'3500',
+    className: 'text-white fondo-ortellus'
+},
+{
+    producto: 'cerveza',
+    cantidad: '150',
+    valor:'5700',
+    className: 'text-white fondo-ortellus'
+},
+{
+    producto: 'agua',
+    cantidad: '333',
+    valor: '1000',
+    className: 'text-white fondo-ortellus'
+},
+{
+    producto: 'gaseosa',
+    cantidad: '233',
+    valor:'3500',
+    className: 'text-white fondo-ortellus'
+},
+{
+    producto: 'agua',
+    cantidad: '333',
+    valor: '1000',
+    className: 'text-white fondo-ortellus'
+},
+{
+    producto: 'gaseosa',
+    cantidad: '233',
+    valor:'3500',
+    className: 'text-white fondo-ortellus'
+},
+
+]
+
+
+
   return (
 
 
  <React.Fragment>  
-    <div class="container">
+    <div className="container pb-5">
         <form>
-            <div class="row">
-                <div class="col-12 text-center">
+            <div className="row">
+                <div className="col-12 text-center">
                     <h2>Número de mesas</h2>
                 </div>
             </div>
             <br/>
 
-            <div class="row justify-content-center pb-4">
-                <div class="col-md-1 mb-4 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">1</h3>
+            <div className="row justify-content-center pb-4">
+                <div className="col-md-1 mb-4 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">1</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">2</h3>
+                <div className="col-md-1 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">2</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">3</h3>
+                <div className="col-md-1 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">3</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">4</h3>
+                <div className="col-md-1 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">4</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">5</h3>
+                <div className="col-md-1 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">5</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">6</h3>
+                <div className="col-md-1 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">6</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">7</h3>
+                <div className="col-md-1 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">7</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">8</h3>
+                <div className="col-md-1 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">8</h3>
                         </div>
                     </div>
                 </div>
             </div>
 
            
-            <div class="row justify-content-center">
-                <div class="col-md-1 mb-4 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">9</h3>
+            <div className="row justify-content-center">
+                <div className="col-md-1 mb-4 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">9</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">10</h3>
+                <div className="col-md-1 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">10</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">11</h3>
+                <div className="col-md-1 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">11</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">12</h3>
+                <div className="col-md-1 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">12</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">13</h3>
+                <div className="col-md-1 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">13</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">14</h3>
+                <div className="col-md-1 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">14</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">15</h3>
+                <div className="col-md-1 col-3">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">15</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 col-3 ">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 border border-dark">
-                            <h3 class="text-center">16</h3>
+                <div className="col-md-1 col-3 ">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 border border-dark">
+                            <h3 className="text-center">16</h3>
                         </div>
                     </div>
                 </div>
             </div>
 
             <br/>
-            <div class="row">
-                <div class="col-md-8">
-                    <h3 class="text-center">Menu</h3>
-                </div>
-            </div>
+          
             
-            <div class="row">
-                <div class="col-md-7">
+            <div className="row px-md-5">
+
+                
+                <div className="col-md-7 fondo-ortellus ">
+                    <h3 className="text-center text-white">Menu</h3>
                     
-                    
-                        <Table bordered responsive="lg">
+                        <Table bordered responsive hover="lg">
                             <thead>
                                 <tr>
                                
@@ -157,11 +205,32 @@ const NumeroMesas = () => {
                                 <th className='text-white fondo-ortellus'>VALOR</th>
                                 </tr>
                             </thead>
+
                             <tbody className=''>
-                                <tr className=''>
-                                <td className='fondo-ortellus'></td>
-                                <td className='fondo-ortellus'></td>
-                                <td className='text-white fondo-ortellus' ></td>
+
+                               {menu.map((item, index) => (
+                                <tr key={index}>
+                                <td 
+                                    className={item.className} 
+                                >{item.producto}</td>
+
+                                <td 
+                                    className={item.className} 
+                                > {item.cantidad}</td>
+
+                                <td 
+                                    className={item.className} 
+                                >$ {item.valor}</td>
+
+                                </tr>
+                               ))}
+
+
+                            {/*
+                                <tr >
+                                <td className='text-white fondo-ortellus'></td>
+                                <td className='text-white fondo-ortellus'></td>
+                                <td className='text-white fondo-ortellus'></td>
                                 </tr>
 
                                 <tr>       
@@ -187,14 +256,18 @@ const NumeroMesas = () => {
                                 <td className='text-white fondo-ortellus'></td>
                                 <td className='text-white fondo-ortellus'></td>
                                 </tr>
+
+                                       */ }
+
+
                             </tbody>
                         </Table>
 
                 </div>
 
-                <div class="col-md-4 pb-5 align-self-end text-center">
-                    <div class="row">
-                        <div class="col-md-10 pb-5">
+                <div className="col-md-4 pb-5 align-self-end text-center">
+                    <div className="row">
+                        <div className="col-md-10 pb-5">
                             <InputGroup className="mb-3">
                                 <InputGroup.Text id="basic-addon1"><AiOutlineSearch/></InputGroup.Text>
                                 <Form.Control

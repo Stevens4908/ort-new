@@ -80,13 +80,13 @@ const MesasAtendidas = () => {
 
         <div class="row">
                 <div class="col-12 text-center">
-                    <h2>Menu</h2>
+                 <h2 className='text-center'>Menu</h2>
                 </div>
-            </div>
+        </div>
 
-        <div class="row justify-content-center">
-                < div class="col-md-7">
-                    
+        <div class="row justify-content-center ">
+                < div class="col-md-7 ">
+                       
                     <Table bordered responsive="lg">
                         <thead>
                             <tr>
