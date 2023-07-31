@@ -26,3 +26,10 @@ code {
   align-items: center;
   height: 90vh;
 }
+
+.centrar-sidebar{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 85vh;
+}

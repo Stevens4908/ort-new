@@ -78,7 +78,7 @@ return(
     
 
       
-        <div className="offcanvas p-0">
+        <div className="offcanvas p-0 ">
 
             <Offcanvas show={show} onHide={handleClose} responsive="lg" className="offcanvas">
                 <Offcanvas.Header closeButton>

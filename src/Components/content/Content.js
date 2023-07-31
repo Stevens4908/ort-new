@@ -1,4 +1,4 @@
-import React from "react"
+import React , { useEffect } from "react"
 import '../content/content.css'
 import { Route, Routes } from "react-router-dom"
 import AgregarEquipo from "../pages/agregar_equipo/AgregarEquipo"
@@ -11,17 +11,32 @@ import Menu from "../pages/menu/Menu"
 import NumeroMesas from "../pages/mesas/NumeroMesas"
 import MesasAtendidas from "../pages/mesas/MesasAtendidas"
 import GestionMesas from "../pages/mesas/GestionMesas"
-import 'react-perfect-scrollbar/dist/css/styles.css';
-import PerfectScrollbar from 'react-perfect-scrollbar'
+import { useLocation } from 'react-router-dom';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import 'perfect-scrollbar/css/perfect-scrollbar.css';
 
 const Content = () => {
 
+    const location = useLocation();
+
+
+    useEffect(() => {
+       
+        const contentContainer = document.getElementById('content-container');
+        if (contentContainer) {
+          contentContainer.scrollTo(0, 0);
+        }
+      }, [location]);
+
+
+
+   
     return(
 
 
 
 <main className="content">
-    <PerfectScrollbar>
+    <PerfectScrollbar id="content-container">
         
 
         {/*<div className="contenedor">*/}
@@ -32,7 +47,7 @@ const Content = () => {
 
                     <Route path="mesas" element={<Mesas/>}>
                         <Route path="equis" element={<Equis/>}/>
-                        <Route path="numeromesas" element={<NumeroMesas/>}>
+                        <Route path="numeromesas" element={<NumeroMesas/>} >
                            
                         </Route>
                         <Route path="mesasatendidas" element={<MesasAtendidas/>}/>

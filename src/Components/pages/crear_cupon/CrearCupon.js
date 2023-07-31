@@ -25,20 +25,20 @@ const CrearCupon = ({cerrar}) => {
             <div className="col-md-6" id="formulario">
                 <form>
                     <div className="form-group py-1">
-                        <input type="text" class="form-control" id="exampleInputNombre" aria-describedby="emailHelp"
+                        <input type="text" className="form-control" id="exampleInputNombre" aria-describedby="emailHelp"
                             placeholder="Nombre" />
                     </div>
                     <div className="form-group py-1">
-                        <input type="text" class="form-control" id="exampleInputCodigo" placeholder="Codigo" />
+                        <input type="text" className="form-control" id="exampleInputCodigo" placeholder="Codigo" />
                     </div>
 
                     <div className="form-group py-1">
-                        <input type="text" class="form-control" id="exampleInputValor" placeholder="Valor" />
+                        <input type="text" className="form-control" id="exampleInputValor" placeholder="Valor" />
                     </div>
 
                     <div className="row justify-content-center py-4">
                         <div className='col-md-5 text-center'>
-                            <button type="submit" class="btn btn-primary fondo-ortellus">REGISTRAR</button>
+                            <button type="submit" className="btn btn-primary fondo-ortellus">REGISTRAR</button>
                         </div>
                         
                     </div>

@@ -6,7 +6,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     display: none ;
     
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 .sidebar .active {
@@ -14,6 +14,7 @@
     
 }
 
+/*
 .x{
    background-color: rgba(0, 0, 0, 0.7);
    height: 80vh;
@@ -22,14 +23,16 @@
     border-radius: 40px 0 0 40px;
 }
 
+
 .sidebar ul{
     padding-top: 5% ;
 }
-
+*/
 .sidebar li{
     list-style: none;
-    line-height: 100px;
+    line-height: 90px;
     font-size: 2em;
+    
 }
 
 .sidebar a{

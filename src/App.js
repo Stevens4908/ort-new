@@ -23,6 +23,13 @@ import NumeroMesas from './Components/pages/mesas/NumeroMesas';
 import MesasAtendidas from './Components/pages/mesas/MesasAtendidas';
 import GestionMesas from './Components/pages/mesas/GestionMesas';
 //import Header from './Components/header/Header';
+//import 'react-perfect-scrollbar/dist/css/styles.css';
+//import PerfectScrollbar from 'react-perfect-scrollbar'
+
+
+
+
+
 
 function App() {
  
@@ -81,7 +88,7 @@ function App() {
 
 </Router>
 
-    
+
 
 </React.Fragment>
       

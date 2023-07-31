@@ -9,11 +9,11 @@ import { FaUserTie } from "react-icons/fa";
 import { PiBookOpenTextFill } from "react-icons/pi";
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import 'react-perfect-scrollbar/dist/css/styles.css';
+import { Container, Row } from "react-bootstrap";
 
 
 const Sidebar = () => {
 
-   
 
 
     const lista = [
@@ -27,7 +27,7 @@ const Sidebar = () => {
         to: "mesas",
         text: "Mesas",
         icon: <MdTableBar />,
-        className: "text-white"
+        className: "text-white "
         },
         {
         to: "crearcupon",
@@ -47,6 +47,7 @@ const Sidebar = () => {
         icon: <PiBookOpenTextFill/>,
         className: "text-white"   
         }
+ 
         
         
     ];
@@ -55,18 +56,24 @@ const Sidebar = () => {
    
     return(
 
-    <React.Fragment>
-        
-            <section className="sidebar" >
-<PerfectScrollbar>
+<React.Fragment>
+       
+<section className="sidebar " >
+
+
+    <PerfectScrollbar>
+
+        <Container className="centrar-sidebar">
+            <Row>
+           
                 {/*<div className="x">*/}
-                    <ul>
+                    <ul >
                         {lista.map((item, index) => (
-                        <li key={index}>
-                            <NavLink to={item.to} className={item.className}  >
+                     <NavLink to={item.to} className={item.className} >   <li key={index} >
+                            
                             {item.icon} {item.text}
-                            </NavLink>
-                        </li>
+                            
+                        </li></NavLink>
                             ))}
                     </ul>
                             <div className="container text-center">
@@ -74,12 +81,16 @@ const Sidebar = () => {
                             </div>
                            
                 {/*</div>*/}
-                
-           </PerfectScrollbar>      
-            </section>
 
-       
-    </React.Fragment>
+            </Row>
+        </Container>  
+
+    </PerfectScrollbar>        
+           
+</section>
+
+     
+</React.Fragment>
 
         
 
