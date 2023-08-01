@@ -61,7 +61,8 @@ const Content = () => {
                     <Route path="/crearproovedor" element={<CrearProovedor/>}/>
                     <Route path="/costosfijos" element={<CostosFijos/>}/>
                     <Route path="/menu" element={<Menu/>}/>
-
+                    <Route path="/empleados" element={<Menu/>}/>
+                    
                 </Routes>
         {/*</div>*/}
     </PerfectScrollbar>     

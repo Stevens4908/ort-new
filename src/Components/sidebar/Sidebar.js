@@ -46,6 +46,12 @@ const Sidebar = () => {
         text: "Costos Fijos",
         icon: <PiBookOpenTextFill/>,
         className: "text-white"   
+        },
+        {
+            to: "empleados",
+            text: "Empleados",
+            icon: <PiBookOpenTextFill/>,
+            className: "text-white"   
         }
  
         
