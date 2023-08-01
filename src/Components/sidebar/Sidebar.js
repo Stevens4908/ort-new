@@ -2,14 +2,20 @@ import React from "react"
 import '../sidebar/sidebar.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, NavLink} from "react-router-dom";
-import {FaPeopleGroup} from 'react-icons/fa6' 
-import {MdTableBar} from 'react-icons/md' 
+/*import {FaPeopleGroup} from 'react-icons/fa6' 
+
 import {RiCoupon3Fill  } from "react-icons/ri";
-import { FaUserTie } from "react-icons/fa";
+import { FaUserTie } from "react-icons/fa";*/
 import { PiBookOpenTextFill } from "react-icons/pi";
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import { Container, Row } from "react-bootstrap";
+import { FaUserGroup } from "react-icons/fa6";
+import { FaUsers } from "react-icons/fa";
+import {MdTableBar} from 'react-icons/md' 
+import { MdOutlineFastfood } from "react-icons/md";
+import { IoRestaurantSharp } from "react-icons/io5";
+import { MdDeliveryDining } from "react-icons/md"; 
 
 
 const Sidebar = () => {
@@ -17,7 +23,7 @@ const Sidebar = () => {
 
 
     const lista = [
-        {
+       /* {
         to: "agregarequipos",
         text: "Agregar Equipo",
         icon: <FaPeopleGroup />,
@@ -46,11 +52,47 @@ const Sidebar = () => {
         text: "Costos Fijos",
         icon: <PiBookOpenTextFill/>,
         className: "text-white"   
-        },
+        },*/
         {
             to: "empleados",
             text: "Empleados",
+            icon: <FaUserGroup/>,
+            className: "text-white"   
+        },
+        {
+            to: "clientes",
+            text: "Clientes",
+            icon: <FaUsers/>,
+            className: "text-white"   
+        },
+        {
+            to: "mesas",
+            text: "Mesas",
+            icon: <MdTableBar/>,
+            className: "text-white"   
+        },
+        {
+            to: "productos",
+            text: "Productos",
+            icon: <MdOutlineFastfood/>,
+            className: "text-white"   
+        },
+        {
+            to: "facturaciones",
+            text: "Facturaciones",
             icon: <PiBookOpenTextFill/>,
+            className: "text-white"   
+        },
+        {
+            to: "restaurantes",
+            text: "Restaurantes",
+            icon: <IoRestaurantSharp/>,
+            className: "text-white"   
+        },
+        {
+            to: "pedidos",
+            text: "Pedidos",
+            icon: <MdDeliveryDining/>,
             className: "text-white"   
         }
  
@@ -64,16 +106,16 @@ const Sidebar = () => {
 
 <React.Fragment>
        
-<section className="sidebar " >
+<section className="sidebar  " >
 
 
-    <PerfectScrollbar>
+    <PerfectScrollbar className="py-5">
 
-        <Container className="centrar-sidebar">
-            <Row>
+        <Container className="centrar-sidebar ">
+            <Row className="">
            
                 {/*<div className="x">*/}
-                    <ul >
+                    <ul className="">
                         {lista.map((item, index) => (
                      <NavLink to={item.to} className={item.className} >   <li key={index} >
                             

@@ -1,8 +1,8 @@
 .sidebar{
     
     grid-area: side;
-    transition: width 0.3s ease;
-    width: 400px ;
+    /*transition: width 0.3s ease;*/
+    width: 23vw ;
     background-color: rgba(0, 0, 0, 0.6);
     display: none ;
     
