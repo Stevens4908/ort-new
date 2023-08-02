@@ -15,10 +15,10 @@ const Clientes = () => {
   return (
     <React.Fragment>
 
-<Container>
+<Container className='py-3'>
 
         
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow} className='mb-3'>
        Crear Cliente
       </Button>
 

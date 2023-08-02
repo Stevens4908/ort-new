@@ -16,11 +16,11 @@ const Mesas2 = () => {
    
     <React.Fragment>
 
-    <Container>
+    <Container className='py-3'>
     
             
-          <Button variant="primary" onClick={handleShow}>
-           Crear Cliente
+          <Button variant="primary" onClick={handleShow} className='mb-3'>
+           Crear Mesa
           </Button>
     
         <Modal show={show} onHide={handleClose}>

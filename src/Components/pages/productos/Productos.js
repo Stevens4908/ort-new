@@ -16,11 +16,11 @@ const Productos = () => {
     
     <React.Fragment>
 
-    <Container>
+    <Container className='py-3'>
     
             
-          <Button variant="primary" onClick={handleShow}>
-           Crear Cliente
+          <Button variant="primary" onClick={handleShow} className='mb-3'>
+           Crear Producto
           </Button>
     
         <Modal show={show} onHide={handleClose}>

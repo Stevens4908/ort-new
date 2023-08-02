@@ -19,15 +19,11 @@ const  Empleados  = () => {
 return(
     
 <React.Fragment>    
-    <Container>
-    <div className='row justify-content-end px-0 pt-4'>
-        <div className='col-11 col-md-8 fondo-ortellus text-end bordes'>
-            <h2 className="text-white">AGREGA LAS SECCIONES NECESARIAS AL MENU</h2>
-        </div>
-    </div>
+    <Container className="py-3">
+  
   
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow} className="mb-3">
        Crea Empleados
       </Button>
 

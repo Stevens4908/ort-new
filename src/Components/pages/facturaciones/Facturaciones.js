@@ -15,11 +15,11 @@ const Facturaciones = () => {
   
     <React.Fragment>
 
-<Container>
+<Container className='py-3'>
 
         
-      <Button variant="primary" onClick={handleShow}>
-       Crear Cliente
+      <Button variant="primary" onClick={handleShow} className='mb-3'>
+       Crear Facturación
       </Button>
 
     <Modal show={show} onHide={handleClose}>
