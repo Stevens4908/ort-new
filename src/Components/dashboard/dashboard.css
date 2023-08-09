@@ -14,7 +14,7 @@ body{
     display: grid;
     height: 100vh;
     grid-template-columns: auto 1fr   ;
-    grid-template-rows: 15vh 1fr;
+    grid-template-rows: 12vh 1fr;
     grid-template-areas: 
     "header header"
     "side main"

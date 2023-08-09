@@ -2,7 +2,7 @@
 
     background-color: rgb(255, 255, 255);
     grid-area: header;
-    z-index: 2;
+    z-index: 7;
 }
 
 .offcanvas-header button.close {
@@ -49,6 +49,10 @@ z-index: 3;
   display: none;
 }
 
+.tam{
+  height: 80px;
+  width: 50px;
+}
 
   @media (min-width:990px){
     

@@ -12,14 +12,14 @@ import {MdTableBar} from 'react-icons/md'
 //import { FaUserTie } from "react-icons/fa";
 import { PiBookOpenTextFill } from "react-icons/pi";
 import {FaCircleUser} from 'react-icons/fa6' 
-import {FaLocationDot} from 'react-icons/fa6'
+/*import {FaLocationDot} from 'react-icons/fa6'
 import { BsTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 import {FaFacebook} from 'react-icons/fa6'
 import {FaInstagram} from 'react-icons/fa6'
 import {FaFacebookMessenger} from 'react-icons/fa6'
 import {FaTwitter} from 'react-icons/fa6'
-import {FaTiktok} from 'react-icons/fa6'
+import {FaTiktok} from 'react-icons/fa6' */
 import logo from '../../assets/images/logo.png'
 
 import { FaUserGroup } from "react-icons/fa6";
@@ -30,8 +30,10 @@ import { IoRestaurantSharp } from "react-icons/io5";
 import { MdDeliveryDining } from "react-icons/md"; 
 
 import Container from 'react-bootstrap/Container';
-import {Row} from "react-bootstrap";
-import {Col} from "react-bootstrap";
+import { Navbar} from "react-bootstrap";
+//import {Col} from "react-bootstrap";
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 const Header = ({cerrar}) => {
@@ -161,88 +163,64 @@ return(
         </div>
 
 
-        <Container fluid className=" ">
+
+
+
             
             
                 
-            <div className="row d-flex align-items-center ">
-                <div className="col-12 ">
-                    <div className="row d-flex align-items-center">
-
-                        <div className="col-2 col-md-1  ">
-                            <Button variant="primary" className="d-lg-none fondo-ortellus" onClick={() => setShow(true)}>
-                            <i ><FaBars /></i>
-                            </Button>
-                        </div>
-
-                        <div className="col-7 col-md-4 ">
-                            <div className="row">
-                                <div className="col-7  px-0">
-                                    <h5 className="text-center">Buenas tardes:</h5>
-                                    <h5 className="text-center">ID/Usuario</h5>
-                                    <p className="text-dark text-center headhide" onClick={cerrar} style={{cursor:'pointer'}}>Cerrar sesión</p>
-                                </div>
-                                
-                                <div className="col-2 d-flex">
-                                    <div className="row d-flex align-items-start">
-                                        <div className="col-12 justify-content-start">
-                                                <i style={{fontSize: "4rem"}} className="pt-0" ><FaCircleUser/></i>
-                                        </div>
-                                            
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-4 col-md-4  headhide">
-                                    <h5 className="text-center">Tienes dudas? Contactanos</h5>
-                                            <div className="row justify-content-center">
-                                                
-                                                    <div className="col-md-1 text-end">
-                                                            <FaLocationDot/>
-                                                    </div>
-                                                    <div className="col-md-1">
-                                                            <BsTelephoneFill/>
-                                                    </div>
-                                                    <div className="col-md-1 text-start">
-                                                            <IoMdMail/>
-                                                    </div>
-                
-                                            </div>
-                                            <div className="row justify-content-center pt-3" >
-                                                <div className="col-md-1"><i><FaFacebook/></i></div>
-                                                <div className="col-md-1"><i><FaFacebookMessenger/></i></div>
-                                                <div className="col-md-1"><i><FaInstagram/></i></div>
-                                                <div className="col-md-1"><i><FaTwitter/></i></div>
-                                                <div className="col-md-1"><i><FaTiktok/></i></div>
-                                            </div>
-                        </div>
-
-                        <div className="col-3 col-md-2  ">
-
-                                    <Row className="justify-content-center  d-flex align-items-center"> 
-                                        <Col md={6} xs={12} >
-                                            <img src={logo} className="img-fluid" alt="logo"></img>
-                                        </Col>
-                                    </Row>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>           
-
-
-                    
-                    
-        </Container>
-
+        <Navbar bg="light" data-bs-theme="light" >
+            <Container>
 
 
  
-  
+                     <Navbar.Brand >
 
+                        <Button variant="primary" className="d-lg-none fondo-ortellus" onClick={() => setShow(true)}>
+                            <i ><FaBars /></i>
+                        </Button>
+
+                    </Navbar.Brand>
+                                
+                    <Navbar.Brand href="#home">
+
+                        <img
+                        src={logo}
+                        width="90"
+                        height="60"
+                        className="d-inline-block align-middle"
+                        alt="React Bootstrap logo"
+                        />
+
+                    </Navbar.Brand>                
+    
+
+   
+                <Nav className="ms-auto align-middle">
+                    <Nav.Link href="#home" className="d-none d-lg-block"><h3 className="align-middle">Home</h3></Nav.Link>
+                    <div className="vr" />
+                    <Nav.Link href="#pricing" className="d-none d-lg-block align-middle"><h3>Usuario</h3></Nav.Link>
+
+                    <h2><NavDropdown title={<FaCircleUser/> }id="basic-nav-dropdown" className="ps-5 ps-md-0">
+                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">
+                        Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.4">
+                    <span className="text-dark" onClick={cerrar} style={{cursor:'pointer'}}>Cerrar sesión</span>
+                    </NavDropdown.Item>
+                    </NavDropdown></h2>
+                </Nav> 
+   
+              
+
+            </Container>
+        </Navbar>
+                  
+  
+ 
 
 </header>
 

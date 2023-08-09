@@ -27,7 +27,7 @@ const Formulario_Empleados = () => {
     <form onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="nombre" className="form-label">Nombre</label>
-        <input type="text" className="form-control" id="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+        <input type="text" className="form-control    focus-ring focus-ring-dark  " id="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
       </div>
       <div className="mb-3">
         <label htmlFor="cedula" className="form-label">Cédula</label>
