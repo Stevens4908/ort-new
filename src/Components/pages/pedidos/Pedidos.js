@@ -1,9 +1,41 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Container, Button, Modal } from 'react-bootstrap'
 import TablaPedidos from '../../Formularios/pedidos/TablaPedidos';
 import FormularioPedidos from '../../Formularios/pedidos/FormularioPedidos';
+import { GetPedidos } from '../../Controllers/Pedidos/funcionesPedidos';
 
 const Pedidos = () => {
+
+
+  ///ESTA FUNCION OBTIENE LOS DATOS Y CAMBIA EL ESTADO
+  const [pedido,setPedido]= useState([])
+
+  const fetchData = async () => {
+    try {
+        const data = await GetPedidos();
+        setPedido(data);
+    } catch (error) {
+        console.error("Error al obtener pedidos:", error);
+    }
+  };
+
+
+  useEffect(() => {
+    fetchData(); // Llamar a la función al montar el componente
+  }, []);
+    
+      ///FIN
+
+         
+///OBTIENE LOS DATOS DE FORMULARIO 
+    const handleDataFromChild = (data) => {
+    
+      console.log(data);
+      setPedido(data);
+     
+    };
+    //FINN
+
 
     const [show, setShow] = useState(false);
 
@@ -28,7 +60,7 @@ const Pedidos = () => {
         </Modal.Header>
 
         <Modal.Body>
-            <FormularioPedidos/>
+            <FormularioPedidos handleClose={handleClose} onDataFromChild={handleDataFromChild}/>
         </Modal.Body>
 
        {/* <Modal.Footer>
@@ -41,7 +73,7 @@ const Pedidos = () => {
         </Modal.Footer>*/}
     </Modal>
 
-    <TablaPedidos pedidos={[]}/>
+    <TablaPedidos pedidos={pedido}/>
 
 </Container>
 

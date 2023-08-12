@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import { PostCliente } from "../../Controllers/Clientes/funcionesClientes";
 
-const FormularioClientes = () => {
+const FormularioClientes = (props) => {
   const [nombreCompleto, setNombreCompleto] = useState("");
   const [cedula, setCedula] = useState("");
   const [telefono, setTelefono] = useState("");
   const [email, setEmail] = useState("");
   const [direccion, setDireccion] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Aquí puedes enviar los datos del formulario a través de una API o realizar otras acciones
     console.log({
@@ -18,6 +19,27 @@ const FormularioClientes = () => {
       Email: email,
       Direccion: direccion,
     });
+
+   
+
+    const data_env={
+      Nombre_Completo: nombreCompleto,
+      Cedula: cedula,
+      Telefono: telefono,
+      Email: email,
+      Direccion: direccion,
+
+    }
+
+//ENVIO DATOS Y OBTENGO NUEVAMENTE LA LISTA 
+   let data= await PostCliente(data_env)
+    props.onDataFromChild(data);
+  
+    //FIN
+
+    props.handleClose();
+  
+
   };
 
   return (

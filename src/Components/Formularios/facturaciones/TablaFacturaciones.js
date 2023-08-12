@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 
-const TablaFacturaciones = ({ facturaciones }) => {
+const TablaFacturaciones = ({facturaciones}) => {
   return (
     <Table striped bordered hover>
       <thead>

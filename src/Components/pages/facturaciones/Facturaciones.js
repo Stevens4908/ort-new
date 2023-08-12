@@ -1,9 +1,38 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Container, Button, Modal } from 'react-bootstrap'
 import TablaFacturaciones from '../../Formularios/facturaciones/TablaFacturaciones'
 import FormularioFacturaciones from '../../Formularios/facturaciones/FormularioFacturaciones'
+import { GetFacturaciones } from '../../Controllers/Facturaciones/funcionesFacturaciones'
 
 const Facturaciones = () => {
+
+  ///ESTA FUNCION OBTIENE LOS DATOS Y CAMBIA EL ESTADO
+  const [facturacion, setFacturacion]= useState([])
+
+  const fetchData = async () => {
+    try {
+        const data = await GetFacturaciones();
+        setFacturacion(data);
+    } catch (error) {
+        console.error("Error al obtener facturas:", error);
+    }
+  };
+
+
+  useEffect(() => {
+    fetchData(); // Llamar a la función al montar el componente
+  }, []);
+    
+      ///FIN
+
+
+      ///OBTIENE LOS DATOS DE FORMULARIO 
+    const handleDataFromChild = (data) => {
+    
+      console.log(data);
+      setFacturacion(data);
+     
+    };
 
     const [show, setShow] = useState(false);
 
@@ -28,7 +57,7 @@ const Facturaciones = () => {
         </Modal.Header>
 
         <Modal.Body>
-            <FormularioFacturaciones/>
+            <FormularioFacturaciones handleClose={handleClose} onDataFromChild={handleDataFromChild}/>
         </Modal.Body>
 
        {/* <Modal.Footer>
@@ -41,7 +70,7 @@ const Facturaciones = () => {
         </Modal.Footer>*/}
     </Modal>
 
-    <TablaFacturaciones facturaciones={[]}/>
+    <TablaFacturaciones facturaciones={facturacion}/>
 
 </Container>
 

@@ -61,7 +61,7 @@ const Restaurantes = () => {
         </Modal.Header>
 
         <Modal.Body>
-            <FormularioRestaurantes  onDataFromChild={handleDataFromChild}/>
+            <FormularioRestaurantes handleClose={handleClose} onDataFromChild={handleDataFromChild}/>
         </Modal.Body>
 
        {/* <Modal.Footer>

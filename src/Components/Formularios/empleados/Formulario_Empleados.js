@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+//import { PostRestaurantes } from "../../Controllers/Restaurantes/functionsrestaurantes";
+import { PostEmpleado } from '../../Controllers/Empleados/funcionesempleados';
 
-const Formulario_Empleados = () => {
+const Formulario_Empleados = (props) => {
+
+
   const [nombre, setNombre] = useState('');
   const [cedula, setCedula] = useState('');
   const [telefono, setTelefono] = useState('');
@@ -9,7 +13,7 @@ const Formulario_Empleados = () => {
   const [email, setEmail] = useState('');
   const [fechaIngreso, setFechaIngreso] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Aquí puedes enviar los datos al servidor o realizar otras acciones con los datos del formulario.
     console.log({
@@ -21,6 +25,30 @@ const Formulario_Empleados = () => {
       email,
       fechaIngreso,
     });
+
+    const data_env1={
+      nombre: nombre,
+      cedula: cedula,
+      telefono: telefono,
+      cargo: cargo,
+      direccion: direccion,
+      email: email,
+      fecha_ingreso: fechaIngreso,
+    };
+
+
+   let data1= await PostEmpleado(data_env1)
+
+    props.onDataFromChild1(data1);
+  
+    //FIN
+
+    props.handleClose();
+  
+
+
+      
+    
   };
 
   return (
@@ -42,8 +70,8 @@ const Formulario_Empleados = () => {
         <input type="text" className="form-control" id="cargo" value={cargo} onChange={(e) => setCargo(e.target.value)} />
       </div>
       <div className="mb-3">
-        <label htmlFor="direccion" className="form-label">Dirección</label>
-        <input type="text" className="form-control" id="direccion" value={direccion} onChange={(e) => setDireccion(e.target.value)} />
+        <label htmlFor="direccion1" className="form-label">Dirección</label>
+        <input type="text" className="form-control" id="direccion1" value={direccion} onChange={(e) => setDireccion(e.target.value)} />
       </div>
       <div className="mb-3">
         <label htmlFor="email" className="form-label">Email</label>

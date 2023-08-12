@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import { PostMesas } from "../../Controllers/Mesas/funcionesMesas";
 
-const FormularioMesas = () => {
+const FormularioMesas = (props) => {
+
   const [disponibilidadMesa, setDisponibilidadMesa] = useState("");
   const [registrarMesa, setRegistrarMesa] = useState("");
   const [observacion, setObservacion] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Aquí puedes enviar los datos del formulario a través de una API o realizar otras acciones
     console.log({
@@ -14,7 +16,23 @@ const FormularioMesas = () => {
       Registrar_mesa: registrarMesa,
       Observacion: observacion,
     });
+
+    const data_env={
+      Disponibilidad_mesa: disponibilidadMesa,
+      Registrar_mesa: registrarMesa,
+      Observacion: observacion,
+    }
+
+    //ENVIO DATOS Y OBTENGO NUEVAMENTE LA LISTA 
+   let data= await PostMesas(data_env)
+   props.onDataFromChild(data);
+ 
+   //FIN
+
+   props.handleClose();
+
   };
+
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -48,7 +66,7 @@ const FormularioMesas = () => {
         />
       </Form.Group>
 
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" className="mt-4">
         Enviar
       </Button>
     </Form>

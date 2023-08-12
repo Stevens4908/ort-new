@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 
 const Tabla_Empleados = ({ empleados }) => {
   return (
-    <Table striped bordered hover>
+    <Table  bordered hover>
       <thead>
         <tr>
           <th>Nombre</th>

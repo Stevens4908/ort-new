@@ -9,7 +9,9 @@ const FormularioRestaurantes = (props) => {
   const [direccion, setDireccion] = useState("");
 
   const  handleSubmit =  async (e) => {
+   
     e.preventDefault();
+     
     // Aquí puedes enviar los datos del formulario a través de una API o realizar otras acciones
     console.log({
       nombre: nombre,
@@ -26,7 +28,11 @@ const FormularioRestaurantes = (props) => {
     props.onDataFromChild(data);
   
     //FIN
+
+    props.handleClose();
   };
+
+ 
 
   return (
     
@@ -52,7 +58,7 @@ const FormularioRestaurantes = (props) => {
         />
       </Form.Group>
 
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" className="mt-4">
         Enviar
       </Button>
     </Form>

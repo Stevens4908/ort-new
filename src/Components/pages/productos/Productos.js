@@ -1,9 +1,39 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Container, Button, Modal } from 'react-bootstrap'
 import TablaProductos from '../../Formularios/productos/TablaProductos';
 import FormularioProductos from '../../Formularios/productos/FormularioProductos';
+import { GetProductos } from '../../Controllers/Productos/funcionesProductos';
 
 const Productos = () => {
+
+
+  ///ESTA FUNCION OBTIENE LOS DATOS Y CAMBIA EL ESTADO
+  const [producto,setProducto]= useState([])
+
+  const fetchData = async () => {
+    try {
+        const data = await GetProductos();
+        setProducto(data);
+    } catch (error) {
+        console.error("Error al obtener productos:", error);
+    }
+  };
+
+
+  useEffect(() => {
+    fetchData(); // Llamar a la función al montar el componente
+  }, []);
+    
+      ///FIN
+
+    ///OBTIENE LOS DATOS DE FORMULARIO 
+    const handleDataFromChild = (data) => {
+    
+      console.log(data);
+      setProducto(data);
+     
+    };
+    //FINN
 
 
     const [show, setShow] = useState(false);
@@ -29,7 +59,7 @@ const Productos = () => {
             </Modal.Header>
     
             <Modal.Body>
-                <FormularioProductos/>
+                <FormularioProductos handleClose={handleClose} onDataFromChild={handleDataFromChild}/>
             </Modal.Body>
     
            {/* <Modal.Footer>
@@ -42,7 +72,7 @@ const Productos = () => {
             </Modal.Footer>*/}
         </Modal>
     
-        <TablaProductos productos={[]}/>
+        <TablaProductos productos={producto}/>
     
     </Container>
     

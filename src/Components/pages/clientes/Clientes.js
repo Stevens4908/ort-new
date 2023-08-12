@@ -1,9 +1,33 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Container, Button, Modal } from 'react-bootstrap'
 import TablaClientes from '../../Formularios/clientes/TablaClientes';
 import FormularioClientes from '../../Formularios/clientes/FormularioClientes';
+import { GetCliente } from '../../Controllers/Clientes/funcionesClientes';
 
 const Clientes = () => {
+
+
+  const [cliente,setCliente]= useState([])
+
+  const fetchData = async () => {
+    try {
+        const data = await GetCliente();
+        setCliente(data);
+    } catch (error) {
+        console.error("Error al obtener restaurantes:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData(); // Llamar a la función al montar el componente
+  }, []);
+
+  const handleDataFromChild = (data) => {
+    
+    console.log(data);
+    setCliente(data);
+   
+  };
 
     const [show, setShow] = useState(false);
 
@@ -28,7 +52,7 @@ const Clientes = () => {
         </Modal.Header>
 
         <Modal.Body>
-            <FormularioClientes/>
+            <FormularioClientes handleClose={handleClose} onDataFromChild={handleDataFromChild}/>
         </Modal.Body>
 
        {/* <Modal.Footer>
@@ -41,7 +65,7 @@ const Clientes = () => {
         </Modal.Footer>*/}
     </Modal>
 
-    <TablaClientes clientes={[]} />
+    <TablaClientes clientes={cliente} />
 
 </Container>
 
