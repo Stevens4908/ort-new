@@ -28,7 +28,8 @@ import { FaUsers } from "react-icons/fa";
 import { MdOutlineFastfood } from "react-icons/md";
 import { IoRestaurantSharp } from "react-icons/io5";
 import { MdDeliveryDining } from "react-icons/md"; 
-
+import {BiFoodMenu} from "react-icons/bi";
+import { FaBoxes } from "react-icons/fa";
 import Container from 'react-bootstrap/Container';
 import { Navbar} from "react-bootstrap";
 //import {Col} from "react-bootstrap";
@@ -77,47 +78,59 @@ const Header = ({cerrar}) => {
          className: "text-white"   
          },*/
          {
-             to: "empleados",
-             text: "Empleados",
-             icon: <FaUserGroup/>,
-             className: "text-white"   
-         },
-         {
-             to: "clientes",
-             text: "Clientes",
-             icon: <FaUsers/>,
-             className: "text-white"   
-         },
-         {
-             to: "mesas",
-             text: "Mesas",
-             icon: <MdTableBar/>,
-             className: "text-white"   
-         },
-         {
-             to: "productos",
-             text: "Productos",
-             icon: <MdOutlineFastfood/>,
-             className: "text-white"   
-         },
-         {
-             to: "facturaciones",
-             text: "Facturaciones",
-             icon: <PiBookOpenTextFill/>,
-             className: "text-white"   
-         },
-         {
-             to: "restaurantes",
-             text: "Restaurantes",
-             icon: <IoRestaurantSharp/>,
-             className: "text-white"   
-         },
-         {
-             to: "pedidos",
-             text: "Pedidos",
-             icon: <MdDeliveryDining/>,
-             className: "text-white"   
-         }
+            to: "empleados",
+            text: "Empleados",
+            icon: <FaUserGroup/>,
+            className: "text-white"   
+        },
+        {
+            to: "clientes",
+            text: "Clientes",
+            icon: <FaUsers/>,
+            className: "text-white"   
+        },
+        {
+            to: "mesas",
+            text: "Mesas",
+            icon: <MdTableBar/>,
+            className: "text-white"   
+        },
+        {
+            to: "productos",
+            text: "Productos",
+            icon: <MdOutlineFastfood/>,
+            className: "text-white"   
+        },
+        {
+            to: "facturaciones",
+            text: "Facturaciones",
+            icon: <PiBookOpenTextFill/>,
+            className: "text-white"   
+        },
+        {
+            to: "restaurantes",
+            text: "Restaurantes",
+            icon: <IoRestaurantSharp/>,
+            className: "text-white"   
+        },
+        {
+            to: "pedidos",
+            text: "Pedidos",
+            icon: <MdDeliveryDining/>,
+            className: "text-white"   
+        },
+        {
+            to: "menu",
+            text: "Menú",
+            icon: <BiFoodMenu/>,
+            className: "text-white"   
+        },
+        {
+            to: "inventario",
+            text: "Inventario",
+            icon: <FaBoxes/>,
+            className: "text-white"   
+        }
   
          
          
@@ -151,9 +164,9 @@ return(
                                 </li>
                                     ))}
                             </ul>
-                                    <div className="container text-center">
+                                    {/*<div className="container text-center">
                                         <Link to="menu"> <button className="boton " onClick={handleLinkClick}>   Menu   </button> </Link>
-                                    </div>
+                                </div>*/}
                     </div>
                             
 

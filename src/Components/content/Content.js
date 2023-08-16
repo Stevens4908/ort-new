@@ -21,6 +21,8 @@ import Facturaciones from "../pages/facturaciones/Facturaciones"
 import Restaurantes from "../pages/restaurantes/Restaurantes"
 import Pedidos from "../pages/pedidos/Pedidos"
 import Empleados from "../pages/empleados/Empleados"
+import Menu from "../pages/menu/Menu";
+import Inventario from "../pages/inventario/Inventario";
 
 const Content = () => {
 
@@ -73,6 +75,8 @@ const Content = () => {
                     <Route path="/facturaciones" element={<Facturaciones/>}/>
                     <Route path="/restaurantes" element={<Restaurantes/>}/>
                     <Route path="/pedidos" element={<Pedidos/>}/>
+                    <Route path="/menu" element={<Menu/>}/>
+                    <Route path="/inventario" element={<Inventario/>}/>
                     
                 </Routes>
         {/*</div>*/}

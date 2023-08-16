@@ -1,7 +1,7 @@
 import React from "react"
 import '../sidebar/sidebar.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link, NavLink} from "react-router-dom";
+import {  NavLink} from "react-router-dom";
 /*import {FaPeopleGroup} from 'react-icons/fa6' 
 
 import {RiCoupon3Fill  } from "react-icons/ri";
@@ -16,6 +16,11 @@ import {MdTableBar} from 'react-icons/md'
 import { MdOutlineFastfood } from "react-icons/md";
 import { IoRestaurantSharp } from "react-icons/io5";
 import { MdDeliveryDining } from "react-icons/md"; 
+import {BiFoodMenu} from "react-icons/bi";
+import { FaBoxes } from "react-icons/fa";
+
+
+
 
 
 const Sidebar = () => {
@@ -94,6 +99,18 @@ const Sidebar = () => {
             text: "Pedidos",
             icon: <MdDeliveryDining/>,
             className: "text-white"   
+        },
+        {
+            to: "menu",
+            text: "Menú",
+            icon: <BiFoodMenu/>,
+            className: "text-white"   
+        },
+        {
+            to: "inventario",
+            text: "Inventario",
+            icon: <FaBoxes/>,
+            className: "text-white"   
         }
  
         
@@ -109,9 +126,9 @@ const Sidebar = () => {
 <section className="sidebar  " >
 
 
-    <PerfectScrollbar className="py-5">
+    <PerfectScrollbar className="py-3">
 
-        <Container className="centrar-sidebar ">
+        <Container className=" ">
             <Row className="">
            
                 {/*<div className="x">*/}
@@ -124,9 +141,9 @@ const Sidebar = () => {
                         </li></NavLink>
                             ))}
                     </ul>
-                            <div className="container text-center">
+                         {/* <div className="container text-center">
                                 <Link to="menu"> <button className="boton ">   Menu     </button> </Link>
-                            </div>
+                        </div> */}
                            
                 {/*</div>*/}
 

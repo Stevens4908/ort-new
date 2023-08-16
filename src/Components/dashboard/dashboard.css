@@ -8,6 +8,7 @@ body{
 
 .dashboard{
     background-image: url("../../assets/images/wolf.jpg");
+    /*background-color: rgb(1, 217, 149);*/
     background-size: cover;
     background-repeat: no-repeat;
 
