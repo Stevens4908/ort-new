@@ -23,6 +23,7 @@ import Pedidos from "../pages/pedidos/Pedidos"
 import Empleados from "../pages/empleados/Empleados"
 import Menu from "../pages/menu/Menu";
 import Inventario from "../pages/inventario/Inventario";
+import Recetas from "../pages/recetas/Recetas";
 
 const Content = () => {
 
@@ -77,6 +78,7 @@ const Content = () => {
                     <Route path="/pedidos" element={<Pedidos/>}/>
                     <Route path="/menu" element={<Menu/>}/>
                     <Route path="/inventario" element={<Inventario/>}/>
+                    <Route path="/recetas" element={<Recetas/>}/>
                     
                 </Routes>
         {/*</div>*/}

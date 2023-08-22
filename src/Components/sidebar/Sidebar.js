@@ -111,6 +111,12 @@ const Sidebar = () => {
             text: "Inventario",
             icon: <FaBoxes/>,
             className: "text-white"   
+        },
+        {
+            to: "recetas",
+            text: "Recetas",
+            icon: <FaBoxes/>,
+            className: "text-white"   
         }
  
         
