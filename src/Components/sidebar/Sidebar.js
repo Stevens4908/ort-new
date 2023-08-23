@@ -18,6 +18,7 @@ import { IoRestaurantSharp } from "react-icons/io5";
 import { MdDeliveryDining } from "react-icons/md"; 
 import {BiFoodMenu} from "react-icons/bi";
 import { FaBoxes } from "react-icons/fa";
+import {FaClipboardList} from "react-icons/fa";
 
 
 
@@ -115,7 +116,7 @@ const Sidebar = () => {
         {
             to: "recetas",
             text: "Recetas",
-            icon: <FaBoxes/>,
+            icon: <FaClipboardList/>,
             className: "text-white"   
         }
  

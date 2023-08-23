@@ -25,9 +25,7 @@ const Recetas = () => {
         <Modal.Body>
             <FormularioRecetas/>
         </Modal.Body>
-        <Modal.Footer>
-         
-        </Modal.Footer>
+       
       </Modal>
     </>
   )

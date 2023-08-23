@@ -42,9 +42,9 @@ const FormularioRecetas = () => {
       </Form.Group>
 
       <Form.Group controlId="fotografia">
-        <Form.Label>Fotografía (URL)</Form.Label>
+        <Form.Label>Fotografía</Form.Label>
         <Form.Control
-          type="text"
+          type="file"
           value={fotografia}
           onChange={e => setFotografia(e.target.value)}
         />
