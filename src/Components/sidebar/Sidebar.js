@@ -21,14 +21,7 @@ import { FaBoxes } from "react-icons/fa";
 import {FaClipboardList} from "react-icons/fa";
 
 
-
-
-
-const Sidebar = () => {
-
-
-
-    const lista = [
+const lista = [
        /* {
         to: "agregarequipos",
         text: "Agregar Equipo",
@@ -125,6 +118,13 @@ const Sidebar = () => {
     ];
 
 
+const Sidebar = () => {
+
+
+
+    
+
+
    
     return(
 
@@ -141,11 +141,13 @@ const Sidebar = () => {
                 {/*<div className="x">*/}
                     <ul className="">
                         {lista.map((item, index) => (
-                     <NavLink to={item.to} className={item.className} >   <li key={index} >
-                            
-                            {item.icon} {item.text}
-                            
-                        </li></NavLink>
+                        <NavLink key={index} to={item.to} className={item.className} >   
+                            <li  >
+                                
+                                {item.icon} {item.text}
+                                
+                            </li>
+                        </NavLink>
                             ))}
                     </ul>
                          {/* <div className="container text-center">
@@ -156,6 +158,7 @@ const Sidebar = () => {
 
             </Row>
         </Container>  
+
 
     </PerfectScrollbar>        
            
@@ -173,4 +176,4 @@ const Sidebar = () => {
 
 }
 
-export default Sidebar;
+export { Sidebar, lista };

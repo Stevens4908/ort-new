@@ -4,37 +4,18 @@ import { FaBars } from "react-icons/fa6";
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-
 import { Link } from "react-router-dom";
-//import {FaPeopleGroup} from 'react-icons/fa6' 
-import {MdTableBar} from 'react-icons/md' 
-//import {RiCoupon3Fill  } from "react-icons/ri";
-//import { FaUserTie } from "react-icons/fa";
-import { PiBookOpenTextFill } from "react-icons/pi";
 import {FaCircleUser} from 'react-icons/fa6' 
-/*import {FaLocationDot} from 'react-icons/fa6'
-import { BsTelephoneFill } from "react-icons/bs";
-import { IoMdMail } from "react-icons/io";
-import {FaFacebook} from 'react-icons/fa6'
-import {FaInstagram} from 'react-icons/fa6'
-import {FaFacebookMessenger} from 'react-icons/fa6'
-import {FaTwitter} from 'react-icons/fa6'
-import {FaTiktok} from 'react-icons/fa6' */
 import logo from '../../assets/images/logo.png'
 
-import { FaUserGroup } from "react-icons/fa6";
-import { FaUsers } from "react-icons/fa";
-
-import { MdOutlineFastfood } from "react-icons/md";
-import { IoRestaurantSharp } from "react-icons/io5";
-import { MdDeliveryDining } from "react-icons/md"; 
-import {BiFoodMenu} from "react-icons/bi";
-import { FaBoxes } from "react-icons/fa";
 import Container from 'react-bootstrap/Container';
 import { Navbar} from "react-bootstrap";
-//import {Col} from "react-bootstrap";
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { lista } from "../sidebar/Sidebar";
+
+
+
 
 
 const Header = ({cerrar}) => {
@@ -45,96 +26,6 @@ const Header = ({cerrar}) => {
     const handleLinkClick  = () => setShow(false);
 
 
-
-    const lista = [
-        /* {
-         to: "agregarequipos",
-         text: "Agregar Equipo",
-         icon: <FaPeopleGroup />,
-         className: "text-white"
-         },
-         {
-         to: "mesas",
-         text: "Mesas",
-         icon: <MdTableBar />,
-         className: "text-white "
-         },
-         {
-         to: "crearcupon",
-         text: "Crear Cupón",
-         icon: <RiCoupon3Fill />,
-         className: "text-white"
-         },
-         {
-         to: "crearproovedor",
-         text: "Crear Proovedor",
-         icon: <FaUserTie/>,
-         className: "text-white"   
-         },
-         {
-         to: "costosfijos",
-         text: "Costos Fijos",
-         icon: <PiBookOpenTextFill/>,
-         className: "text-white"   
-         },*/
-         {
-            to: "empleados",
-            text: "Empleados",
-            icon: <FaUserGroup/>,
-            className: "text-white"   
-        },
-        {
-            to: "clientes",
-            text: "Clientes",
-            icon: <FaUsers/>,
-            className: "text-white"   
-        },
-        {
-            to: "mesas",
-            text: "Mesas",
-            icon: <MdTableBar/>,
-            className: "text-white"   
-        },
-        {
-            to: "productos",
-            text: "Productos",
-            icon: <MdOutlineFastfood/>,
-            className: "text-white"   
-        },
-        {
-            to: "facturaciones",
-            text: "Facturaciones",
-            icon: <PiBookOpenTextFill/>,
-            className: "text-white"   
-        },
-        {
-            to: "restaurantes",
-            text: "Restaurantes",
-            icon: <IoRestaurantSharp/>,
-            className: "text-white"   
-        },
-        {
-            to: "pedidos",
-            text: "Pedidos",
-            icon: <MdDeliveryDining/>,
-            className: "text-white"   
-        },
-        {
-            to: "menu",
-            text: "Menú",
-            icon: <BiFoodMenu/>,
-            className: "text-white"   
-        },
-        {
-            to: "inventario",
-            text: "Inventario",
-            icon: <FaBoxes/>,
-            className: "text-white"   
-        }
-  
-         
-         
-     ];
 
 
 return(

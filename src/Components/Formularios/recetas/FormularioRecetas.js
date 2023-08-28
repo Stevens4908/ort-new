@@ -1,27 +1,80 @@
 import React, { useState } from 'react';
 import { Form, Button, Image } from 'react-bootstrap';
 import Select from 'react-select';
+import { PostReceta } from '../../Controllers/Recetas/FuncionesRecetas';
 //import DatePicker from 'react-datepicker';
 //import 'react-datepicker/dist/react-datepicker.css';
 
-const options = [
-  { value: 'ingrediente1', label: 'Ingrediente 1' },
-  { value: 'ingrediente2', label: 'Ingrediente 2' },
-  { value: 'ingrediente3', label: 'Ingrediente 3' },
-  { value: 'ingrediente4', label: 'Ingrediente 4' },
-  { value: 'ingrediente5', label: 'Ingrediente 5' },
-  // Agrega más ingredientes según sea necesario
-];
 
-const FormularioRecetas = () => {
+
+
+
+
+const FormularioRecetas = (props) => {
+
+const handleIngredientesChange = selectedOptions => {
+    setIngredientes(selectedOptions);
+  };
+
   const [nombrePlato, setNombrePlato] = useState('');
   const [fotografia, setFotografia] = useState('');
   const [ingredientes, setIngredientes] = useState([]);
 
-  const handleIngredientesChange = selectedOptions => {
-    setIngredientes(selectedOptions);
-  };
 
+
+
+  const handleSubmit = async (e) => {
+
+
+    
+    e.preventDefault();
+    // Aquí puedes enviar los datos del formulario a través de una API o realizar otras acciones
+    console.log({
+      Nombre_Plato: nombrePlato,
+      Fotografia: fotografia,
+      Ingredientes: ingredientes,
+   
+    });
+
+
+    const data_env={
+      Nombre_Plato: nombrePlato,
+      Fotografia: fotografia,
+      Ingredientes: JSON.stringify(ingredientes.map(item => item.value)),
+      }
+
+  console.log(data_env)
+
+  //ENVIO DATOS Y OBTENGO NUEVAMENTE LA LISTA 
+  let data= await PostReceta(data_env)
+  
+  props.onDataFromChild(data);
+
+  //FIN
+
+  props.handleClose();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  console.log(inventario)
+  const [nombrePlato, setNombrePlato] = useState('');
+  const [fotografia, setFotografia] = useState('');
+  const [ingredientes, setIngredientes] = useState([]);
+
+  
   const handleSubmit = event => {
     event.preventDefault();
     // Aquí puedes enviar los datos a tu backend o realizar las operaciones necesarias
@@ -29,6 +82,8 @@ const FormularioRecetas = () => {
     console.log('Fotografía:', fotografia);
     console.log('Ingredientes:', ingredientes);
   };
+*/
+}
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -54,9 +109,9 @@ const FormularioRecetas = () => {
       <Form.Group controlId="ingredientes">
         <Form.Label>Ingredientes</Form.Label>
         <Select
-          options={options}
+          options={props.inventario}
           isMulti
-          value={ingredientes}
+          //value={ingredientes}
           onChange={handleIngredientesChange}
         />
       </Form.Group>
