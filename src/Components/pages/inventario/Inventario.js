@@ -16,8 +16,9 @@ const Inventario = () => {
     } catch (error) {
         console.error("Error al obtener inventario:", error);
     }
+    
   };
-
+  console.log(inventario);
 
   useEffect(() => {
     fetchData(); // Llamar a la función al montar el componente
@@ -63,7 +64,7 @@ const Inventario = () => {
        
     </Modal>
 
-    <TablaInventario inventario={inventario}/>
+    <TablaInventario inventario={inventario} setInventario={setInventario}/>
 
 </Container>
 

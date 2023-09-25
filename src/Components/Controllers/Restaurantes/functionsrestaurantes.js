@@ -6,8 +6,9 @@ import { api } from '../../utils/url_api';
 export  async function GetRestaurantes(){
     const  llamado_api= await axios.get(api+"api/restaurantes").then(res => {
         return res.data.data
+        
       });
-
+      console.log(llamado_api)
      return  llamado_api;
 }
 export async function PostRestaurantes(data){

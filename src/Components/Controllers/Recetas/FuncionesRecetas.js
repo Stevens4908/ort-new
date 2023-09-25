@@ -17,8 +17,13 @@ export async function PostReceta(data){
   
       return  llamado_api;
 }
-export function UpdateRestaurante(){
-
+export async function UpdateReceta(id_actulizar,datos){
+  const  llamado_api=await axios.post(api+"api/updatereceta/"+id_actulizar,datos).then(res => {
+    console.log(res.data);
+           return res.data.data
+         });
+     
+         return  llamado_api;
 }
 export function DeleteRestaurante(){
 

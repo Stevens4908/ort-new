@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 //import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Container, Row } from "react-bootstrap";
-import pizza from '../../../assets/images/pizza.png'
+//import pizza from '../../../assets/images/pizza.png'
 //import Offcanvas from 'react-bootstrap/Offcanvas';
 //import Modal from 'react-bootstrap/Modal';
 //import { useState } from 'react';
@@ -13,154 +13,216 @@ import '../menu/menu.css'
 //import Table from 'react-bootstrap/Table';
 import MenuOffcanvas from "./MenuOffcanvas";
 import FormularioMenu from "../../Formularios/menu/FomularioMenu";
-import { GetReceta } from "../../Controllers/Recetas/FuncionesRecetas";
+//import { GetReceta } from "../../Controllers/Recetas/FuncionesRecetas";
+import { Table, Form, Button } from "react-bootstrap";
 
 //import { Link } from "react-router-dom";
-
 const  Menu  = () => {
-
-  const [receta, setReceta]= useState([])
-
-  const fetchData = async () => {
-    try {
-        const data = await GetReceta();
-        setReceta(data);
-    } catch (error) {
-        console.error("Error al obtener receta:", error);
-    }
-  };
-
-
+  const [isEditing, setIsEditing] = useState(false); // Estado para controlar si el formulario de edición está abierto
+  const [menus, setClientes] = useState([]);
+  const [editedMenu, setEditedMenu] = useState({});
   useEffect(() => {
-    fetchData(); // Llamar a la función al montar el componente
-  }, []);
-    
+      fetch("http://127.0.0.1:8000/api/receta_menu/43")
+        .then(response => response.json())
+        .then(datareact => setClientes(datareact.data))
+        .catch(error => console.error(error));
+    }, []);
       ///FIN
-
+    //console.log(menus);
 
       ///OBTIENE LOS DATOS DE FORMULARIO 
-    const handleDataFromChild = (data) => {
-    
-      console.log(data);
-      setReceta(data);
      
+      
+      const [menus1, setClientess] = useState([]);
+    useEffect(() => {
+      fetch("http://127.0.0.1:8000/api/menu")
+        .then(response => response.json())
+        .then(datareact => setClientess(datareact.data))
+        .catch(error => console.error(error));
+    }, []);
+      ///FIN
+   // console.log(menus1);
+          
+
+
+    const handleEliminar = async (id) => {
+      try {
+        // Realiza una solicitud DELETE a la API para eliminar el elemento con el ID proporcionado.
+        await fetch(`http://127.0.0.1:8000/api/deletemenu/${id}`, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+  
+        // Actualiza la vista eliminando el elemento de la lista de recetas.
+        const nuevaReceta = menus1.filter(item => item.id !== id);
+        setClientess(nuevaReceta);
+      } catch (error) {
+        console.error("Error al eliminar el elemento:", error);
+      }
     };
+
+    const handleEditar = (men) => {
+      // Cuando se hace clic en "Editar", guarda los valores de la mesa en editedMesa
+      setEditedMenu({
+        Id_Receta: men.Id_Receta,
+        Precio: men.Precio,
+        descripcion: men.descripcion,
+        id: men.id,
+      });
+      // Abre el formulario de edición
+      setIsEditing(true);
+    };
+    const handleDataFromChild = (data) => {
+     console.log(data);
+  if (Array.isArray(data)) {
+    setClientess(data);
+  } else {
+    console.error("Los datos recibidos no son un array válido:", data);
+  }
+    };
+    
+   //const handleDataFromChild = (data) => {
+    
+    // console.log(data);
+     // setInventario(data);
+     
+    //};
+  
+    const handleGuardar = async () => {
+      try {
+        // Envía los datos editados al servidor
+        await fetch(`http://127.0.0.1:8000/api/menu/${editedMenu.id}`, {
+          method: 'PATCH', // Puedes usar 'PATCH' si la API lo admite
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(editedMenu),
+        });
+        
+        //console.log(editedMenu);
+        // Cierra el formulario de edición
+        setIsEditing(false);
+  
+        // Actualiza la lista de mesas con los datos editados
+        const updatedMesas = menus1.map(item => {
+          if (item.id === editedMenu.id) {
+            return editedMenu;
+          }
+          return item;
+        });
+        setClientess(updatedMesas);
+      } catch (error) {
+        console.error("Error al actualizar el elemento:", error);
+      }
+    };
+    
+   
+
     
 return(
     
 <React.Fragment>    
     <Container className="pt-3">
     
+    <FormularioMenu onDataFromChild={handleDataFromChild} />
+    <div>
+       {isEditing ? ( // Renderiza el formulario de edición si isEditing es true
+       <Form>
+      <Form.Group controlId="disponibilidadMesa">
+        <Form.Label>Id Recetas</Form.Label>
+        <Form.Control
+          type="text"
+          name="Disponibilidad_mesa"
+          value={editedMenu.Id_Receta}
+          onChange={(e) => setEditedMenu({ ...editedMenu, Id_Receta: e.target.value })}
+        />
+      </Form.Group>
 
-    <FormularioMenu receta={receta}/>
+      <Form.Group controlId="registrarMesa">
+        <Form.Label>Precio</Form.Label>
+        <Form.Control
+          type="text"
+          name="Registrar_mesa"
+          value={editedMenu.Precio}
+          onChange={(e) => setEditedMenu({ ...editedMenu, Precio: e.target.value })}
+        />
+      </Form.Group>
 
+      <Form.Group controlId="observacion">
+        <Form.Label>Descripcion</Form.Label>
+        <Form.Control
+          as="textarea"
+          rows={3}
+          name="Observacion"
+          value={editedMenu.descripcion}
+          onChange={(e) => setEditedMenu({ ...editedMenu, descripcion: e.target.value })}
+        />
+      </Form.Group>
 
-      <Row className="">
-
-        <Col md={3} xs={6} className="justify-content-center ">
-          <Card style={{ }}>
-            <Card.Img variant="top" src={pizza} />
-            <Card.Body>
-              <Card.Title className="text-center">Pizza grande</Card.Title>
-              
-              <Card.Text className=" text-center" style={{fontSize:'1.1em'}}><strong>
-                 $20.000</strong>
-              </Card.Text>
-            
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-              
-            </Card.Body>
-          </Card>
-        </Col>
+      <Button variant="primary" onClick={handleGuardar}>
+            Guardar
+          </Button>
+        </Form>
+      ) : (
+    <Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>Id Receta</th>
+          <th>Precio</th>
+          <th>Descripcion</th>
+          <th>options</th>
           
-        <Col md={3} xs={6} className="">
-          <Card style={{ }}>
-            <Card.Img variant="top" src={pizza} />
-            <Card.Body>
-              <Card.Title className="text-center">Pizza grande</Card.Title>
+           </tr>
+      </thead>
+      <tbody>
+        {menus1.map((item, index) => (
+          <tr key={index}>
+            <td>{item.Id_Receta}</td>
+            <td>{item.Precio}</td>
+            <td>{item.descripcion}</td>
+            <td>
+            <button   className="btn btn-success" onClick={() => handleEditar(item)}>Editar</button>
+                
+                  <button
+                    onClick={() => handleEliminar(item.id)} // Llama a la función handleEliminar con el ID del producto
+                    className="btn btn-danger"
+                  >
+                    Eliminar
+                  </button>
               
-              <Card.Text className=" text-center" style={{fontSize:'1.1em'}}><strong>
-                 $20.000</strong>
-              </Card.Text>
+            </td>
+            </tr>
             
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-              
-            </Card.Body>
-          </Card>
-        </Col>
-
-        <Col md={3} xs={6} className="">
+        ))}
         
-        <Card style={{  }}>
-            <Card.Img variant="top" src={pizza} />
-            <Card.Body>
-              <Card.Title className="text-center">Pizza grande</Card.Title>
-              
-              <Card.Text className=" text-center" style={{fontSize:'1.1em'}}><strong>
-                 $20.000</strong>
-              </Card.Text>
-            
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-              
-            </Card.Body>
-          </Card>
-            
-        </Col>
+      </tbody>
+    </Table>
+     )}
+    </div>
+    <Row className="">
+          {menus.map(menu => (
+            <Col md={3} xs={6} className="justify-content-center " key={menu.id}>
+              <Card style={{ }}>
+              <Card.Img variant="top" src={`http://127.0.0.1:8000/${menu.Fotografia}`} /> {/* Utiliza el campo de la imagen */}
+                <Card.Body>
+                  <Card.Title className="text-center">{menu.Nombre_Plato}</Card.Title>
+                  <Card.Text className=" text-center" style={{fontSize:'1.1em'}}><strong>
+                     ${menu.Precio}</strong>
+                  </Card.Text>
+                  <Card.Text>
+                  {menu.descripcion}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+          <MenuOffcanvas/>
+        </Row>
 
-        <Col md={3} xs={6} className="">
-          <Card style={{  }}>
-            <Card.Img variant="top" src={pizza} />
-            <Card.Body>
-              <Card.Title className="text-center">Pizza grande</Card.Title>
-              
-              <Card.Text className=" text-center" style={{fontSize:'1.1em'}}><strong>
-                 $20.000</strong>
-              </Card.Text>
-            
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-              
-            </Card.Body>
-          </Card>
-        </Col>
 
-        <Col md={3} xs={6} className="">
-        
-        <Card style={{  }}>
-            <Card.Img variant="top" src={pizza} />
-            <Card.Body>
-              <Card.Title className="text-center">Pizza grande</Card.Title>
-              
-              <Card.Text className=" text-center" style={{fontSize:'1.1em'}}><strong>
-                 $20.000</strong>
-              </Card.Text>
-            
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-              
-            </Card.Body>
-          </Card>
-            
-        </Col>
-
-       <MenuOffcanvas/>
-       
-
-      </Row>
-
+     
       
    
  

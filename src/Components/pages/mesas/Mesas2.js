@@ -54,7 +54,7 @@ const Mesas2 = () => {
             </Modal.Header>
     
             <Modal.Body>
-                <FormularioMesas handleClose={handleClose} onDataFromChild={handleDataFromChild}/>
+                <FormularioMesas handleClose={handleClose} onDataFromChild={handleDataFromChild} />
             </Modal.Body>
     
            {/* <Modal.Footer>
@@ -67,7 +67,7 @@ const Mesas2 = () => {
             </Modal.Footer>*/}
         </Modal>
     
-        <TablaMesa mesas={mesa}/>
+        <TablaMesa mesas={mesa} setMesa={setMesa}/>
     
     </Container>
     
